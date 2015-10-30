@@ -1,0 +1,27 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Listing Websitesis</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Adresi</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @websitesis.each do |websitesi| %>
+      <tr>
+        <td><%= websitesi.adresi %></td>
+        <td><%= link_to 'Show', websitesi %></td>
+        <td><%= link_to 'Edit', edit_websitesi_path(websitesi) %></td>
+        <td><%= link_to 'Destroy', websitesi, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Websitesi', new_websitesi_path %>

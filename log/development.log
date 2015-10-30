@@ -1,0 +1,3753 @@
+  [1m[36m (105.2ms)[0m  [1mCREATE TABLE "schema_migrations" ("version" varchar NOT NULL) [0m
+  [1m[35m (0.3ms)[0m  select sqlite_version(*)
+  [1m[36m (99.9ms)[0m  [1mCREATE UNIQUE INDEX "unique_schema_migrations" ON "schema_migrations" ("version")[0m
+  [1m[35mActiveRecord::SchemaMigration Load (0.1ms)[0m  SELECT "schema_migrations".* FROM "schema_migrations"
+Migrating to CreateWebsitesis (20151028175354)
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.2ms)[0m  CREATE TABLE "websitesis" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "adresi" varchar, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL) 
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20151028175354"]]
+  [1m[35m (127.6ms)[0m  commit transaction
+  [1m[36mActiveRecord::SchemaMigration Load (0.0ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+
+
+Started GET "/" for 127.0.0.1 at 2015-10-28 20:57:26 +0300
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by HomeController#index as HTML
+  Rendered home/index.html.erb within layouts/application (0.6ms)
+Completed 200 OK in 613ms (Views: 606.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/home.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2015-10-28 20:57:26 +0300
+
+
+Started GET "/assets/scaffolds.self-75397570e7a1ff554dba3dc47300f020e17c6347615f91ff79c7737dcd1ccc2b.css?body=1" for 127.0.0.1 at 2015-10-28 20:57:26 +0300
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for 127.0.0.1 at 2015-10-28 20:57:26 +0300
+
+
+Started GET "/assets/websitesis.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2015-10-28 20:57:26 +0300
+
+
+Started GET "/assets/jquery_ujs.self-d456baa54c1fa6be2ec3711f0a72ddf7a5b2f34a6b4f515f33767d6207b7d4b3.js?body=1" for 127.0.0.1 at 2015-10-28 20:57:26 +0300
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for 127.0.0.1 at 2015-10-28 20:57:26 +0300
+
+
+Started GET "/assets/jquery.self-a714331225dda820228db323939889f149aec0127aeb06255646b616ba1ca419.js?body=1" for 127.0.0.1 at 2015-10-28 20:57:26 +0300
+
+
+Started GET "/assets/home.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2015-10-28 20:57:26 +0300
+
+
+Started GET "/assets/websitesis.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2015-10-28 20:57:26 +0300
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for 127.0.0.1 at 2015-10-28 20:57:26 +0300
+
+
+Started GET "/favorisiteler" for 127.0.0.1 at 2015-10-28 20:58:28 +0300
+
+ActionController::RoutingError (No route matches [GET] "/favorisiteler"):
+  actionpack (4.2.4) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  web-console (2.2.1) lib/web_console/middleware.rb:39:in `call'
+  actionpack (4.2.4) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.2.4) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.2.4) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.2.4) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.2.4) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.2.4) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.2.4) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.2.4) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.6.4) lib/rack/methodoverride.rb:22:in `call'
+  rack (1.6.4) lib/rack/runtime.rb:18:in `call'
+  activesupport (4.2.4) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+  rack (1.6.4) lib/rack/lock.rb:17:in `call'
+  actionpack (4.2.4) lib/action_dispatch/middleware/static.rb:116:in `call'
+  rack (1.6.4) lib/rack/sendfile.rb:113:in `call'
+  railties (4.2.4) lib/rails/engine.rb:518:in `call'
+  railties (4.2.4) lib/rails/application.rb:165:in `call'
+  rack (1.6.4) lib/rack/lock.rb:17:in `call'
+  rack (1.6.4) lib/rack/content_length.rb:15:in `call'
+  rack (1.6.4) lib/rack/handler/webrick.rb:88:in `service'
+  /home/abdullah/.rbenv/versions/2.2.3/lib/ruby/2.2.0/webrick/httpserver.rb:138:in `service'
+  /home/abdullah/.rbenv/versions/2.2.3/lib/ruby/2.2.0/webrick/httpserver.rb:94:in `run'
+  /home/abdullah/.rbenv/versions/2.2.3/lib/ruby/2.2.0/webrick/server.rb:294:in `block in start_thread'
+
+
+  Rendered /home/abdullah/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (0.9ms)
+  Rendered /home/abdullah/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/routes/_route.html.erb (0.6ms)
+  Rendered /home/abdullah/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/routes/_table.html.erb (3.7ms)
+  Rendered /home/abdullah/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.9ms)
+  Rendered /home/abdullah/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (21.8ms)
+  Rendered /home/abdullah/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/_markup.html.erb (0.2ms)
+  Rendered /home/abdullah/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.7ms)
+  Rendered /home/abdullah/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.2ms)
+  Rendered /home/abdullah/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.2ms)
+  Rendered /home/abdullah/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/console.js.erb within layouts/javascript (12.9ms)
+  Rendered /home/abdullah/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/main.js.erb within layouts/javascript (0.2ms)
+  Rendered /home/abdullah/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.2ms)
+  Rendered /home/abdullah/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/index.html.erb (23.6ms)
+
+
+Started GET "/favorisitelers" for 127.0.0.1 at 2015-10-28 20:58:30 +0300
+
+ActionController::RoutingError (No route matches [GET] "/favorisitelers"):
+  actionpack (4.2.4) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  web-console (2.2.1) lib/web_console/middleware.rb:39:in `call'
+  actionpack (4.2.4) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.2.4) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.2.4) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.2.4) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.2.4) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.2.4) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.2.4) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.2.4) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.6.4) lib/rack/methodoverride.rb:22:in `call'
+  rack (1.6.4) lib/rack/runtime.rb:18:in `call'
+  activesupport (4.2.4) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+  rack (1.6.4) lib/rack/lock.rb:17:in `call'
+  actionpack (4.2.4) lib/action_dispatch/middleware/static.rb:116:in `call'
+  rack (1.6.4) lib/rack/sendfile.rb:113:in `call'
+  railties (4.2.4) lib/rails/engine.rb:518:in `call'
+  railties (4.2.4) lib/rails/application.rb:165:in `call'
+  rack (1.6.4) lib/rack/lock.rb:17:in `call'
+  rack (1.6.4) lib/rack/content_length.rb:15:in `call'
+  rack (1.6.4) lib/rack/handler/webrick.rb:88:in `service'
+  /home/abdullah/.rbenv/versions/2.2.3/lib/ruby/2.2.0/webrick/httpserver.rb:138:in `service'
+  /home/abdullah/.rbenv/versions/2.2.3/lib/ruby/2.2.0/webrick/httpserver.rb:94:in `run'
+  /home/abdullah/.rbenv/versions/2.2.3/lib/ruby/2.2.0/webrick/server.rb:294:in `block in start_thread'
+
+
+  Rendered /home/abdullah/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.1ms)
+  Rendered /home/abdullah/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/routes/_route.html.erb (0.6ms)
+  Rendered /home/abdullah/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/routes/_table.html.erb (0.9ms)
+  Rendered /home/abdullah/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.9ms)
+  Rendered /home/abdullah/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (18.5ms)
+  Rendered /home/abdullah/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/_markup.html.erb (0.2ms)
+  Rendered /home/abdullah/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.2ms)
+  Rendered /home/abdullah/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.1ms)
+  Rendered /home/abdullah/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.4ms)
+  Rendered /home/abdullah/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/console.js.erb within layouts/javascript (11.3ms)
+  Rendered /home/abdullah/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/main.js.erb within layouts/javascript (0.2ms)
+  Rendered /home/abdullah/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.2ms)
+  Rendered /home/abdullah/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/index.html.erb (22.7ms)
+
+
+Started GET "/" for 127.0.0.1 at 2015-10-28 20:58:48 +0300
+Processing by HomeController#index as HTML
+  Rendered home/index.html.erb within layouts/application (0.0ms)
+Completed 200 OK in 20ms (Views: 19.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/websitesis" for 127.0.0.1 at 2015-10-28 20:59:28 +0300
+Processing by WebsitesisController#index as HTML
+  [1m[35mWebsitesi Load (0.1ms)[0m  SELECT "websitesis".* FROM "websitesis"
+  Rendered websitesis/index.html.erb within layouts/application (1.4ms)
+Completed 200 OK in 23ms (Views: 21.6ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/websitesis/new" for 127.0.0.1 at 2015-10-28 21:00:34 +0300
+Processing by WebsitesisController#new as HTML
+  Rendered websitesis/_form.html.erb (6.8ms)
+  Rendered websitesis/new.html.erb within layouts/application (8.8ms)
+Completed 200 OK in 39ms (Views: 34.3ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/" for 127.0.0.1 at 2015-10-28 21:02:07 +0300
+Processing by HomeController#index as HTML
+  [1m[36mWebsitesi Load (0.2ms)[0m  [1mSELECT "websitesis".* FROM "websitesis"[0m
+  Rendered home/index.html.erb within layouts/application (0.3ms)
+Completed 200 OK in 37ms (Views: 34.7ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/websitesis" for 127.0.0.1 at 2015-10-28 21:02:10 +0300
+Processing by WebsitesisController#index as HTML
+  [1m[35mWebsitesi Load (0.1ms)[0m  SELECT "websitesis".* FROM "websitesis"
+  Rendered websitesis/index.html.erb within layouts/application (0.6ms)
+Completed 200 OK in 23ms (Views: 22.5ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/websitesis/new" for 127.0.0.1 at 2015-10-28 21:02:12 +0300
+Processing by WebsitesisController#new as HTML
+  Rendered websitesis/_form.html.erb (2.2ms)
+  Rendered websitesis/new.html.erb within layouts/application (3.3ms)
+Completed 200 OK in 29ms (Views: 27.3ms | ActiveRecord: 0.2ms)
+
+
+Started POST "/websitesis" for 127.0.0.1 at 2015-10-28 21:02:16 +0300
+Processing by WebsitesisController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"EhK8NgwXrP6HMENZOUiVp/pLQpK8OQ6mpIBSzPCGDMsSTu78aJYxMjvL4XewKbh3n7Hn4vqCY2dn3AlMbDrkVA==", "websitesi"=>{"adresi"=>"www.google.com"}, "commit"=>"Create Websitesi"}
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "websitesis" ("adresi", "created_at", "updated_at") VALUES (?, ?, ?)  [["adresi", "www.google.com"], ["created_at", "2015-10-28 18:02:16.068542"], ["updated_at", "2015-10-28 18:02:16.068542"]]
+  [1m[36m (193.9ms)[0m  [1mcommit transaction[0m
+Redirected to http://localhost:3000/websitesis/1
+Completed 302 Found in 199ms (ActiveRecord: 194.3ms)
+
+
+Started GET "/websitesis/1" for 127.0.0.1 at 2015-10-28 21:02:16 +0300
+Processing by WebsitesisController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mWebsitesi Load (0.1ms)[0m  SELECT  "websitesis".* FROM "websitesis" WHERE "websitesis"."id" = ? LIMIT 1  [["id", 1]]
+  Rendered websitesis/show.html.erb within layouts/application (0.6ms)
+Completed 200 OK in 23ms (Views: 19.7ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/" for 127.0.0.1 at 2015-10-28 21:02:23 +0300
+Processing by HomeController#index as HTML
+  [1m[36mWebsitesi Load (0.1ms)[0m  [1mSELECT "websitesis".* FROM "websitesis"[0m
+  Rendered home/index.html.erb within layouts/application (0.0ms)
+Completed 200 OK in 23ms (Views: 22.5ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/" for 127.0.0.1 at 2015-10-28 21:03:12 +0300
+Processing by HomeController#index as HTML
+  [1m[35mWebsitesi Load (0.1ms)[0m  SELECT "websitesis".* FROM "websitesis"
+  Rendered home/index.html.erb within layouts/application (0.3ms)
+Completed 200 OK in 20ms (Views: 19.2ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/" for 127.0.0.1 at 2015-10-28 21:03:39 +0300
+Processing by HomeController#index as HTML
+  [1m[36mWebsitesi Load (0.2ms)[0m  [1mSELECT "websitesis".* FROM "websitesis"[0m
+  Rendered home/index.html.erb within layouts/application (0.6ms)
+Completed 200 OK in 39ms (Views: 36.5ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/assets/home.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2015-10-28 21:03:40 +0300
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for 127.0.0.1 at 2015-10-28 21:03:40 +0300
+
+
+Started GET "/assets/scaffolds.self-75397570e7a1ff554dba3dc47300f020e17c6347615f91ff79c7737dcd1ccc2b.css?body=1" for 127.0.0.1 at 2015-10-28 21:03:40 +0300
+
+
+Started GET "/assets/websitesis.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2015-10-28 21:03:40 +0300
+
+
+Started GET "/assets/jquery_ujs.self-d456baa54c1fa6be2ec3711f0a72ddf7a5b2f34a6b4f515f33767d6207b7d4b3.js?body=1" for 127.0.0.1 at 2015-10-28 21:03:40 +0300
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for 127.0.0.1 at 2015-10-28 21:03:40 +0300
+
+
+Started GET "/assets/jquery.self-a714331225dda820228db323939889f149aec0127aeb06255646b616ba1ca419.js?body=1" for 127.0.0.1 at 2015-10-28 21:03:40 +0300
+
+
+Started GET "/assets/home.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2015-10-28 21:03:40 +0300
+
+
+Started GET "/assets/websitesis.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2015-10-28 21:03:40 +0300
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for 127.0.0.1 at 2015-10-28 21:03:40 +0300
+
+
+Started GET "/" for 127.0.0.1 at 2015-10-28 21:04:06 +0300
+Processing by HomeController#index as HTML
+  [1m[35mWebsitesi Load (0.1ms)[0m  SELECT "websitesis".* FROM "websitesis"
+  Rendered home/index.html.erb within layouts/application (0.3ms)
+Completed 200 OK in 21ms (Views: 19.9ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/assets/scaffolds.self-75397570e7a1ff554dba3dc47300f020e17c6347615f91ff79c7737dcd1ccc2b.css?body=1" for 127.0.0.1 at 2015-10-28 21:04:06 +0300
+
+
+Started GET "/assets/home.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2015-10-28 21:04:06 +0300
+
+
+Started GET "/assets/websitesis.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2015-10-28 21:04:06 +0300
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for 127.0.0.1 at 2015-10-28 21:04:06 +0300
+
+
+Started GET "/assets/jquery.self-a714331225dda820228db323939889f149aec0127aeb06255646b616ba1ca419.js?body=1" for 127.0.0.1 at 2015-10-28 21:04:06 +0300
+
+
+Started GET "/assets/jquery_ujs.self-d456baa54c1fa6be2ec3711f0a72ddf7a5b2f34a6b4f515f33767d6207b7d4b3.js?body=1" for 127.0.0.1 at 2015-10-28 21:04:06 +0300
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for 127.0.0.1 at 2015-10-28 21:04:06 +0300
+
+
+Started GET "/assets/home.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2015-10-28 21:04:06 +0300
+
+
+Started GET "/assets/websitesis.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2015-10-28 21:04:06 +0300
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for 127.0.0.1 at 2015-10-28 21:04:06 +0300
+
+
+Started GET "/" for 127.0.0.1 at 2015-10-28 21:04:14 +0300
+Processing by HomeController#index as HTML
+  [1m[36mWebsitesi Load (0.1ms)[0m  [1mSELECT "websitesis".* FROM "websitesis"[0m
+  Rendered home/index.html.erb within layouts/application (0.3ms)
+Completed 200 OK in 20ms (Views: 19.0ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/assets/scaffolds.self-75397570e7a1ff554dba3dc47300f020e17c6347615f91ff79c7737dcd1ccc2b.css?body=1" for 127.0.0.1 at 2015-10-28 21:04:14 +0300
+
+
+Started GET "/assets/home.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2015-10-28 21:04:14 +0300
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for 127.0.0.1 at 2015-10-28 21:04:14 +0300
+
+
+Started GET "/assets/jquery.self-a714331225dda820228db323939889f149aec0127aeb06255646b616ba1ca419.js?body=1" for 127.0.0.1 at 2015-10-28 21:04:14 +0300
+
+
+Started GET "/assets/jquery_ujs.self-d456baa54c1fa6be2ec3711f0a72ddf7a5b2f34a6b4f515f33767d6207b7d4b3.js?body=1" for 127.0.0.1 at 2015-10-28 21:04:14 +0300
+
+
+Started GET "/assets/websitesis.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2015-10-28 21:04:14 +0300
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for 127.0.0.1 at 2015-10-28 21:04:14 +0300
+
+
+Started GET "/assets/home.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2015-10-28 21:04:14 +0300
+
+
+Started GET "/assets/websitesis.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2015-10-28 21:04:14 +0300
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for 127.0.0.1 at 2015-10-28 21:04:14 +0300
+
+
+Started GET "/websitesis" for 127.0.0.1 at 2015-10-28 21:04:22 +0300
+Processing by WebsitesisController#index as HTML
+  [1m[35mWebsitesi Load (0.1ms)[0m  SELECT "websitesis".* FROM "websitesis"
+  Rendered websitesis/index.html.erb within layouts/application (0.8ms)
+Completed 200 OK in 22ms (Views: 21.1ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/websitesis/new" for 127.0.0.1 at 2015-10-28 21:04:24 +0300
+Processing by WebsitesisController#new as HTML
+  Rendered websitesis/_form.html.erb (0.8ms)
+  Rendered websitesis/new.html.erb within layouts/application (1.2ms)
+Completed 200 OK in 25ms (Views: 24.6ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/websitesis" for 127.0.0.1 at 2015-10-28 21:04:29 +0300
+Processing by WebsitesisController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"31u0/0GHEyTfNapBatzbEg4r1vSCZtl+9cEN2tv+auXfB+Y1JQaO6GPOCG/jvfbCa9FzhMTdtL82nVZaR0KCeg==", "websitesi"=>{"adresi"=>"www.facebook.com"}, "commit"=>"Create Websitesi"}
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "websitesis" ("adresi", "created_at", "updated_at") VALUES (?, ?, ?)  [["adresi", "www.facebook.com"], ["created_at", "2015-10-28 18:04:29.716766"], ["updated_at", "2015-10-28 18:04:29.716766"]]
+  [1m[36m (199.9ms)[0m  [1mcommit transaction[0m
+Redirected to http://localhost:3000/websitesis/2
+Completed 302 Found in 202ms (ActiveRecord: 200.1ms)
+
+
+Started GET "/websitesis/2" for 127.0.0.1 at 2015-10-28 21:04:29 +0300
+Processing by WebsitesisController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[35mWebsitesi Load (0.1ms)[0m  SELECT  "websitesis".* FROM "websitesis" WHERE "websitesis"."id" = ? LIMIT 1  [["id", 2]]
+  Rendered websitesis/show.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 24ms (Views: 23.5ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/websitesis" for 127.0.0.1 at 2015-10-28 21:04:32 +0300
+Processing by WebsitesisController#index as HTML
+  [1m[36mWebsitesi Load (0.1ms)[0m  [1mSELECT "websitesis".* FROM "websitesis"[0m
+  Rendered websitesis/index.html.erb within layouts/application (1.2ms)
+Completed 200 OK in 19ms (Views: 18.5ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/websitesis/new" for 127.0.0.1 at 2015-10-28 21:04:32 +0300
+Processing by WebsitesisController#new as HTML
+  Rendered websitesis/_form.html.erb (1.3ms)
+  Rendered websitesis/new.html.erb within layouts/application (2.0ms)
+Completed 200 OK in 21ms (Views: 20.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/websitesis/new" for 127.0.0.1 at 2015-10-28 21:04:36 +0300
+Processing by WebsitesisController#new as HTML
+  Rendered websitesis/_form.html.erb (1.4ms)
+  Rendered websitesis/new.html.erb within layouts/application (2.3ms)
+Completed 200 OK in 31ms (Views: 30.1ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/websitesis" for 127.0.0.1 at 2015-10-28 21:04:43 +0300
+Processing by WebsitesisController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"2j9sJ02zxx2V3y97pn5XkMqBfhCY2E40S+HbdDZ/qEPaYz7tKTJa0SkkjVUvH3pAr3vbYN5jI/WIvYD0qsNA3A==", "websitesi"=>{"adresi"=>"www.twitter.com"}, "commit"=>"Create Websitesi"}
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "websitesis" ("adresi", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["adresi", "www.twitter.com"], ["created_at", "2015-10-28 18:04:43.064999"], ["updated_at", "2015-10-28 18:04:43.064999"]]
+  [1m[35m (229.3ms)[0m  commit transaction
+Redirected to http://localhost:3000/websitesis/3
+Completed 302 Found in 231ms (ActiveRecord: 229.5ms)
+
+
+Started GET "/websitesis/3" for 127.0.0.1 at 2015-10-28 21:04:43 +0300
+Processing by WebsitesisController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mWebsitesi Load (0.1ms)[0m  [1mSELECT  "websitesis".* FROM "websitesis" WHERE "websitesis"."id" = ? LIMIT 1[0m  [["id", 3]]
+  Rendered websitesis/show.html.erb within layouts/application (0.2ms)
+Completed 200 OK in 20ms (Views: 19.2ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/websitesis" for 127.0.0.1 at 2015-10-28 21:04:45 +0300
+Processing by WebsitesisController#index as HTML
+  [1m[35mWebsitesi Load (0.1ms)[0m  SELECT "websitesis".* FROM "websitesis"
+  Rendered websitesis/index.html.erb within layouts/application (0.8ms)
+Completed 200 OK in 28ms (Views: 27.4ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/" for 127.0.0.1 at 2015-10-28 21:04:50 +0300
+Processing by HomeController#index as HTML
+  [1m[36mWebsitesi Load (0.1ms)[0m  [1mSELECT "websitesis".* FROM "websitesis"[0m
+  Rendered home/index.html.erb within layouts/application (0.1ms)
+Completed 200 OK in 31ms (Views: 29.7ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/" for 127.0.0.1 at 2015-10-28 21:04:51 +0300
+Processing by HomeController#index as HTML
+  [1m[35mWebsitesi Load (0.1ms)[0m  SELECT "websitesis".* FROM "websitesis"
+  Rendered home/index.html.erb within layouts/application (0.0ms)
+Completed 200 OK in 22ms (Views: 20.3ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/assets/scaffolds.self-75397570e7a1ff554dba3dc47300f020e17c6347615f91ff79c7737dcd1ccc2b.css?body=1" for 127.0.0.1 at 2015-10-28 21:04:51 +0300
+
+
+Started GET "/assets/home.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2015-10-28 21:04:51 +0300
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for 127.0.0.1 at 2015-10-28 21:04:51 +0300
+
+
+Started GET "/assets/websitesis.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2015-10-28 21:04:51 +0300
+
+
+Started GET "/assets/jquery_ujs.self-d456baa54c1fa6be2ec3711f0a72ddf7a5b2f34a6b4f515f33767d6207b7d4b3.js?body=1" for 127.0.0.1 at 2015-10-28 21:04:51 +0300
+
+
+Started GET "/assets/jquery.self-a714331225dda820228db323939889f149aec0127aeb06255646b616ba1ca419.js?body=1" for 127.0.0.1 at 2015-10-28 21:04:51 +0300
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for 127.0.0.1 at 2015-10-28 21:04:51 +0300
+
+
+Started GET "/assets/home.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2015-10-28 21:04:51 +0300
+
+
+Started GET "/assets/websitesis.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2015-10-28 21:04:51 +0300
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for 127.0.0.1 at 2015-10-28 21:04:51 +0300
+
+
+Started GET "/" for 127.0.0.1 at 2015-10-28 21:04:52 +0300
+Processing by HomeController#index as HTML
+  [1m[36mWebsitesi Load (0.2ms)[0m  [1mSELECT "websitesis".* FROM "websitesis"[0m
+  Rendered home/index.html.erb within layouts/application (0.0ms)
+Completed 200 OK in 22ms (Views: 21.0ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/assets/scaffolds.self-75397570e7a1ff554dba3dc47300f020e17c6347615f91ff79c7737dcd1ccc2b.css?body=1" for 127.0.0.1 at 2015-10-28 21:04:52 +0300
+
+
+Started GET "/assets/websitesis.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2015-10-28 21:04:52 +0300
+
+
+Started GET "/assets/home.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2015-10-28 21:04:52 +0300
+
+
+Started GET "/assets/jquery_ujs.self-d456baa54c1fa6be2ec3711f0a72ddf7a5b2f34a6b4f515f33767d6207b7d4b3.js?body=1" for 127.0.0.1 at 2015-10-28 21:04:52 +0300
+
+
+Started GET "/assets/jquery.self-a714331225dda820228db323939889f149aec0127aeb06255646b616ba1ca419.js?body=1" for 127.0.0.1 at 2015-10-28 21:04:52 +0300
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for 127.0.0.1 at 2015-10-28 21:04:52 +0300
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for 127.0.0.1 at 2015-10-28 21:04:52 +0300
+
+
+Started GET "/assets/home.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2015-10-28 21:04:52 +0300
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for 127.0.0.1 at 2015-10-28 21:04:52 +0300
+
+
+Started GET "/assets/websitesis.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2015-10-28 21:04:52 +0300
+
+
+Started GET "/" for 127.0.0.1 at 2015-10-28 21:04:53 +0300
+Processing by HomeController#index as HTML
+  [1m[35mWebsitesi Load (0.1ms)[0m  SELECT "websitesis".* FROM "websitesis"
+  Rendered home/index.html.erb within layouts/application (0.0ms)
+Completed 200 OK in 21ms (Views: 20.7ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/assets/home.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2015-10-28 21:04:53 +0300
+
+
+Started GET "/assets/scaffolds.self-75397570e7a1ff554dba3dc47300f020e17c6347615f91ff79c7737dcd1ccc2b.css?body=1" for 127.0.0.1 at 2015-10-28 21:04:53 +0300
+
+
+Started GET "/assets/websitesis.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2015-10-28 21:04:53 +0300
+
+
+Started GET "/assets/jquery_ujs.self-d456baa54c1fa6be2ec3711f0a72ddf7a5b2f34a6b4f515f33767d6207b7d4b3.js?body=1" for 127.0.0.1 at 2015-10-28 21:04:53 +0300
+
+
+Started GET "/assets/jquery.self-a714331225dda820228db323939889f149aec0127aeb06255646b616ba1ca419.js?body=1" for 127.0.0.1 at 2015-10-28 21:04:53 +0300
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for 127.0.0.1 at 2015-10-28 21:04:53 +0300
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for 127.0.0.1 at 2015-10-28 21:04:53 +0300
+
+
+Started GET "/assets/home.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2015-10-28 21:04:53 +0300
+
+
+Started GET "/assets/websitesis.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2015-10-28 21:04:53 +0300
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for 127.0.0.1 at 2015-10-28 21:04:53 +0300
+
+
+Started GET "/" for 127.0.0.1 at 2015-10-28 21:04:53 +0300
+Processing by HomeController#index as HTML
+  [1m[36mWebsitesi Load (0.1ms)[0m  [1mSELECT "websitesis".* FROM "websitesis"[0m
+  Rendered home/index.html.erb within layouts/application (0.0ms)
+Completed 200 OK in 22ms (Views: 20.5ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/assets/home.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2015-10-28 21:04:53 +0300
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for 127.0.0.1 at 2015-10-28 21:04:53 +0300
+
+
+Started GET "/assets/websitesis.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2015-10-28 21:04:53 +0300
+
+
+Started GET "/assets/scaffolds.self-75397570e7a1ff554dba3dc47300f020e17c6347615f91ff79c7737dcd1ccc2b.css?body=1" for 127.0.0.1 at 2015-10-28 21:04:53 +0300
+
+
+Started GET "/assets/jquery.self-a714331225dda820228db323939889f149aec0127aeb06255646b616ba1ca419.js?body=1" for 127.0.0.1 at 2015-10-28 21:04:53 +0300
+
+
+Started GET "/assets/jquery_ujs.self-d456baa54c1fa6be2ec3711f0a72ddf7a5b2f34a6b4f515f33767d6207b7d4b3.js?body=1" for 127.0.0.1 at 2015-10-28 21:04:53 +0300
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for 127.0.0.1 at 2015-10-28 21:04:53 +0300
+
+
+Started GET "/assets/home.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2015-10-28 21:04:53 +0300
+
+
+Started GET "/assets/websitesis.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2015-10-28 21:04:53 +0300
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for 127.0.0.1 at 2015-10-28 21:04:53 +0300
+
+
+Started GET "/" for 127.0.0.1 at 2015-10-28 21:04:54 +0300
+Processing by HomeController#index as HTML
+  [1m[35mWebsitesi Load (0.1ms)[0m  SELECT "websitesis".* FROM "websitesis"
+  Rendered home/index.html.erb within layouts/application (0.0ms)
+Completed 200 OK in 20ms (Views: 19.0ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/assets/scaffolds.self-75397570e7a1ff554dba3dc47300f020e17c6347615f91ff79c7737dcd1ccc2b.css?body=1" for 127.0.0.1 at 2015-10-28 21:04:54 +0300
+
+
+Started GET "/assets/home.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2015-10-28 21:04:54 +0300
+
+
+Started GET "/assets/websitesis.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2015-10-28 21:04:54 +0300
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for 127.0.0.1 at 2015-10-28 21:04:54 +0300
+
+
+Started GET "/assets/jquery.self-a714331225dda820228db323939889f149aec0127aeb06255646b616ba1ca419.js?body=1" for 127.0.0.1 at 2015-10-28 21:04:54 +0300
+
+
+Started GET "/assets/jquery_ujs.self-d456baa54c1fa6be2ec3711f0a72ddf7a5b2f34a6b4f515f33767d6207b7d4b3.js?body=1" for 127.0.0.1 at 2015-10-28 21:04:54 +0300
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for 127.0.0.1 at 2015-10-28 21:04:54 +0300
+
+
+Started GET "/assets/home.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2015-10-28 21:04:54 +0300
+
+
+Started GET "/assets/websitesis.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2015-10-28 21:04:54 +0300
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for 127.0.0.1 at 2015-10-28 21:04:54 +0300
+
+
+Started GET "/" for 127.0.0.1 at 2015-10-28 21:04:54 +0300
+Processing by HomeController#index as HTML
+  [1m[36mWebsitesi Load (0.1ms)[0m  [1mSELECT "websitesis".* FROM "websitesis"[0m
+  Rendered home/index.html.erb within layouts/application (0.1ms)
+Completed 200 OK in 23ms (Views: 22.1ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/assets/home.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2015-10-28 21:04:54 +0300
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for 127.0.0.1 at 2015-10-28 21:04:54 +0300
+
+
+Started GET "/assets/jquery.self-a714331225dda820228db323939889f149aec0127aeb06255646b616ba1ca419.js?body=1" for 127.0.0.1 at 2015-10-28 21:04:54 +0300
+
+
+Started GET "/assets/scaffolds.self-75397570e7a1ff554dba3dc47300f020e17c6347615f91ff79c7737dcd1ccc2b.css?body=1" for 127.0.0.1 at 2015-10-28 21:04:54 +0300
+
+
+Started GET "/assets/websitesis.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2015-10-28 21:04:54 +0300
+
+
+Started GET "/assets/jquery_ujs.self-d456baa54c1fa6be2ec3711f0a72ddf7a5b2f34a6b4f515f33767d6207b7d4b3.js?body=1" for 127.0.0.1 at 2015-10-28 21:04:54 +0300
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for 127.0.0.1 at 2015-10-28 21:04:54 +0300
+
+
+Started GET "/assets/home.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2015-10-28 21:04:54 +0300
+
+
+Started GET "/assets/websitesis.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2015-10-28 21:04:54 +0300
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for 127.0.0.1 at 2015-10-28 21:04:54 +0300
+
+
+Started GET "/" for 127.0.0.1 at 2015-10-28 21:04:55 +0300
+Processing by HomeController#index as HTML
+  [1m[35mWebsitesi Load (0.1ms)[0m  SELECT "websitesis".* FROM "websitesis"
+  Rendered home/index.html.erb within layouts/application (0.0ms)
+Completed 200 OK in 27ms (Views: 26.0ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/assets/home.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2015-10-28 21:04:55 +0300
+
+
+Started GET "/assets/scaffolds.self-75397570e7a1ff554dba3dc47300f020e17c6347615f91ff79c7737dcd1ccc2b.css?body=1" for 127.0.0.1 at 2015-10-28 21:04:55 +0300
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for 127.0.0.1 at 2015-10-28 21:04:55 +0300
+
+
+Started GET "/assets/jquery_ujs.self-d456baa54c1fa6be2ec3711f0a72ddf7a5b2f34a6b4f515f33767d6207b7d4b3.js?body=1" for 127.0.0.1 at 2015-10-28 21:04:55 +0300
+
+
+Started GET "/assets/jquery.self-a714331225dda820228db323939889f149aec0127aeb06255646b616ba1ca419.js?body=1" for 127.0.0.1 at 2015-10-28 21:04:55 +0300
+
+
+Started GET "/assets/websitesis.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2015-10-28 21:04:55 +0300
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for 127.0.0.1 at 2015-10-28 21:04:55 +0300
+
+
+Started GET "/assets/home.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2015-10-28 21:04:55 +0300
+
+
+Started GET "/assets/websitesis.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2015-10-28 21:04:55 +0300
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for 127.0.0.1 at 2015-10-28 21:04:55 +0300
+
+
+Started GET "/" for 127.0.0.1 at 2015-10-28 21:04:55 +0300
+Processing by HomeController#index as HTML
+  [1m[36mWebsitesi Load (0.3ms)[0m  [1mSELECT "websitesis".* FROM "websitesis"[0m
+  Rendered home/index.html.erb within layouts/application (0.0ms)
+Completed 200 OK in 25ms (Views: 23.4ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/assets/home.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2015-10-28 21:04:55 +0300
+
+
+Started GET "/assets/scaffolds.self-75397570e7a1ff554dba3dc47300f020e17c6347615f91ff79c7737dcd1ccc2b.css?body=1" for 127.0.0.1 at 2015-10-28 21:04:55 +0300
+
+
+Started GET "/assets/jquery.self-a714331225dda820228db323939889f149aec0127aeb06255646b616ba1ca419.js?body=1" for 127.0.0.1 at 2015-10-28 21:04:55 +0300
+
+
+Started GET "/assets/websitesis.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2015-10-28 21:04:55 +0300
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for 127.0.0.1 at 2015-10-28 21:04:55 +0300
+
+
+Started GET "/assets/jquery_ujs.self-d456baa54c1fa6be2ec3711f0a72ddf7a5b2f34a6b4f515f33767d6207b7d4b3.js?body=1" for 127.0.0.1 at 2015-10-28 21:04:55 +0300
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for 127.0.0.1 at 2015-10-28 21:04:55 +0300
+
+
+Started GET "/assets/home.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2015-10-28 21:04:55 +0300
+
+
+Started GET "/assets/websitesis.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2015-10-28 21:04:55 +0300
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for 127.0.0.1 at 2015-10-28 21:04:55 +0300
+
+
+Started GET "/" for 127.0.0.1 at 2015-10-28 21:04:55 +0300
+Processing by HomeController#index as HTML
+  [1m[35mWebsitesi Load (0.1ms)[0m  SELECT "websitesis".* FROM "websitesis"
+  Rendered home/index.html.erb within layouts/application (0.1ms)
+Completed 200 OK in 28ms (Views: 26.7ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/assets/home.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2015-10-28 21:04:55 +0300
+
+
+Started GET "/assets/scaffolds.self-75397570e7a1ff554dba3dc47300f020e17c6347615f91ff79c7737dcd1ccc2b.css?body=1" for 127.0.0.1 at 2015-10-28 21:04:55 +0300
+
+
+Started GET "/assets/jquery_ujs.self-d456baa54c1fa6be2ec3711f0a72ddf7a5b2f34a6b4f515f33767d6207b7d4b3.js?body=1" for 127.0.0.1 at 2015-10-28 21:04:55 +0300
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for 127.0.0.1 at 2015-10-28 21:04:55 +0300
+
+
+Started GET "/assets/jquery.self-a714331225dda820228db323939889f149aec0127aeb06255646b616ba1ca419.js?body=1" for 127.0.0.1 at 2015-10-28 21:04:55 +0300
+
+
+Started GET "/assets/websitesis.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2015-10-28 21:04:55 +0300
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for 127.0.0.1 at 2015-10-28 21:04:55 +0300
+
+
+Started GET "/assets/home.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2015-10-28 21:04:55 +0300
+
+
+Started GET "/assets/websitesis.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2015-10-28 21:04:55 +0300
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for 127.0.0.1 at 2015-10-28 21:04:55 +0300
+
+
+Started GET "/" for 127.0.0.1 at 2015-10-28 21:04:56 +0300
+Processing by HomeController#index as HTML
+  [1m[36mWebsitesi Load (0.1ms)[0m  [1mSELECT "websitesis".* FROM "websitesis"[0m
+  Rendered home/index.html.erb within layouts/application (0.0ms)
+Completed 200 OK in 35ms (Views: 34.2ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/assets/home.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2015-10-28 21:04:56 +0300
+
+
+Started GET "/assets/scaffolds.self-75397570e7a1ff554dba3dc47300f020e17c6347615f91ff79c7737dcd1ccc2b.css?body=1" for 127.0.0.1 at 2015-10-28 21:04:56 +0300
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for 127.0.0.1 at 2015-10-28 21:04:56 +0300
+
+
+Started GET "/assets/websitesis.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2015-10-28 21:04:56 +0300
+
+
+Started GET "/assets/jquery.self-a714331225dda820228db323939889f149aec0127aeb06255646b616ba1ca419.js?body=1" for 127.0.0.1 at 2015-10-28 21:04:56 +0300
+
+
+Started GET "/assets/jquery_ujs.self-d456baa54c1fa6be2ec3711f0a72ddf7a5b2f34a6b4f515f33767d6207b7d4b3.js?body=1" for 127.0.0.1 at 2015-10-28 21:04:56 +0300
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for 127.0.0.1 at 2015-10-28 21:04:56 +0300
+
+
+Started GET "/assets/home.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2015-10-28 21:04:56 +0300
+
+
+Started GET "/assets/websitesis.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2015-10-28 21:04:56 +0300
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for 127.0.0.1 at 2015-10-28 21:04:56 +0300
+
+
+Started GET "/" for 127.0.0.1 at 2015-10-28 21:04:56 +0300
+Processing by HomeController#index as HTML
+  [1m[35mWebsitesi Load (0.3ms)[0m  SELECT "websitesis".* FROM "websitesis"
+  Rendered home/index.html.erb within layouts/application (0.0ms)
+Completed 200 OK in 29ms (Views: 27.5ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/assets/scaffolds.self-75397570e7a1ff554dba3dc47300f020e17c6347615f91ff79c7737dcd1ccc2b.css?body=1" for 127.0.0.1 at 2015-10-28 21:04:56 +0300
+
+
+Started GET "/assets/home.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2015-10-28 21:04:56 +0300
+
+
+Started GET "/assets/websitesis.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2015-10-28 21:04:56 +0300
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for 127.0.0.1 at 2015-10-28 21:04:56 +0300
+
+
+Started GET "/assets/jquery.self-a714331225dda820228db323939889f149aec0127aeb06255646b616ba1ca419.js?body=1" for 127.0.0.1 at 2015-10-28 21:04:56 +0300
+
+
+Started GET "/assets/jquery_ujs.self-d456baa54c1fa6be2ec3711f0a72ddf7a5b2f34a6b4f515f33767d6207b7d4b3.js?body=1" for 127.0.0.1 at 2015-10-28 21:04:56 +0300
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for 127.0.0.1 at 2015-10-28 21:04:56 +0300
+
+
+Started GET "/assets/home.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2015-10-28 21:04:56 +0300
+
+
+Started GET "/assets/websitesis.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2015-10-28 21:04:56 +0300
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for 127.0.0.1 at 2015-10-28 21:04:56 +0300
+
+
+Started GET "/" for 127.0.0.1 at 2015-10-28 21:04:56 +0300
+Processing by HomeController#index as HTML
+  [1m[36mWebsitesi Load (0.1ms)[0m  [1mSELECT "websitesis".* FROM "websitesis"[0m
+  Rendered home/index.html.erb within layouts/application (0.1ms)
+Completed 200 OK in 19ms (Views: 17.8ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/assets/scaffolds.self-75397570e7a1ff554dba3dc47300f020e17c6347615f91ff79c7737dcd1ccc2b.css?body=1" for 127.0.0.1 at 2015-10-28 21:04:56 +0300
+
+
+Started GET "/assets/home.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2015-10-28 21:04:56 +0300
+
+
+Started GET "/assets/websitesis.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2015-10-28 21:04:56 +0300
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for 127.0.0.1 at 2015-10-28 21:04:56 +0300
+
+
+Started GET "/assets/jquery_ujs.self-d456baa54c1fa6be2ec3711f0a72ddf7a5b2f34a6b4f515f33767d6207b7d4b3.js?body=1" for 127.0.0.1 at 2015-10-28 21:04:56 +0300
+
+
+Started GET "/assets/jquery.self-a714331225dda820228db323939889f149aec0127aeb06255646b616ba1ca419.js?body=1" for 127.0.0.1 at 2015-10-28 21:04:56 +0300
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for 127.0.0.1 at 2015-10-28 21:04:56 +0300
+
+
+Started GET "/assets/home.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2015-10-28 21:04:56 +0300
+
+
+Started GET "/assets/websitesis.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2015-10-28 21:04:56 +0300
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for 127.0.0.1 at 2015-10-28 21:04:56 +0300
+
+
+Started GET "/" for 127.0.0.1 at 2015-10-28 21:04:56 +0300
+Processing by HomeController#index as HTML
+  [1m[35mWebsitesi Load (0.1ms)[0m  SELECT "websitesis".* FROM "websitesis"
+  Rendered home/index.html.erb within layouts/application (0.0ms)
+Completed 200 OK in 21ms (Views: 19.7ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/assets/home.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2015-10-28 21:04:56 +0300
+
+
+Started GET "/assets/jquery.self-a714331225dda820228db323939889f149aec0127aeb06255646b616ba1ca419.js?body=1" for 127.0.0.1 at 2015-10-28 21:04:56 +0300
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for 127.0.0.1 at 2015-10-28 21:04:56 +0300
+
+
+Started GET "/assets/websitesis.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2015-10-28 21:04:56 +0300
+
+
+Started GET "/assets/jquery_ujs.self-d456baa54c1fa6be2ec3711f0a72ddf7a5b2f34a6b4f515f33767d6207b7d4b3.js?body=1" for 127.0.0.1 at 2015-10-28 21:04:56 +0300
+
+
+Started GET "/assets/scaffolds.self-75397570e7a1ff554dba3dc47300f020e17c6347615f91ff79c7737dcd1ccc2b.css?body=1" for 127.0.0.1 at 2015-10-28 21:04:56 +0300
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for 127.0.0.1 at 2015-10-28 21:04:56 +0300
+
+
+Started GET "/assets/home.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2015-10-28 21:04:56 +0300
+
+
+Started GET "/assets/websitesis.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2015-10-28 21:04:56 +0300
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for 127.0.0.1 at 2015-10-28 21:04:56 +0300
+
+
+Started GET "/" for 127.0.0.1 at 2015-10-28 21:04:57 +0300
+Processing by HomeController#index as HTML
+  [1m[36mWebsitesi Load (0.1ms)[0m  [1mSELECT "websitesis".* FROM "websitesis"[0m
+  Rendered home/index.html.erb within layouts/application (0.0ms)
+Completed 200 OK in 38ms (Views: 37.3ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/assets/home.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2015-10-28 21:04:57 +0300
+
+
+Started GET "/assets/scaffolds.self-75397570e7a1ff554dba3dc47300f020e17c6347615f91ff79c7737dcd1ccc2b.css?body=1" for 127.0.0.1 at 2015-10-28 21:04:57 +0300
+
+
+Started GET "/assets/jquery_ujs.self-d456baa54c1fa6be2ec3711f0a72ddf7a5b2f34a6b4f515f33767d6207b7d4b3.js?body=1" for 127.0.0.1 at 2015-10-28 21:04:57 +0300
+
+
+Started GET "/assets/websitesis.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2015-10-28 21:04:57 +0300
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for 127.0.0.1 at 2015-10-28 21:04:57 +0300
+
+
+Started GET "/assets/jquery.self-a714331225dda820228db323939889f149aec0127aeb06255646b616ba1ca419.js?body=1" for 127.0.0.1 at 2015-10-28 21:04:57 +0300
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for 127.0.0.1 at 2015-10-28 21:04:57 +0300
+
+
+Started GET "/assets/home.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2015-10-28 21:04:57 +0300
+
+
+Started GET "/assets/websitesis.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2015-10-28 21:04:57 +0300
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for 127.0.0.1 at 2015-10-28 21:04:57 +0300
+
+
+Started GET "/" for 127.0.0.1 at 2015-10-28 21:04:57 +0300
+Processing by HomeController#index as HTML
+  [1m[35mWebsitesi Load (0.1ms)[0m  SELECT "websitesis".* FROM "websitesis"
+  Rendered home/index.html.erb within layouts/application (0.1ms)
+Completed 200 OK in 23ms (Views: 22.5ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/assets/scaffolds.self-75397570e7a1ff554dba3dc47300f020e17c6347615f91ff79c7737dcd1ccc2b.css?body=1" for 127.0.0.1 at 2015-10-28 21:04:57 +0300
+
+
+Started GET "/assets/home.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2015-10-28 21:04:57 +0300
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for 127.0.0.1 at 2015-10-28 21:04:57 +0300
+
+
+Started GET "/assets/websitesis.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2015-10-28 21:04:57 +0300
+
+
+Started GET "/assets/jquery_ujs.self-d456baa54c1fa6be2ec3711f0a72ddf7a5b2f34a6b4f515f33767d6207b7d4b3.js?body=1" for 127.0.0.1 at 2015-10-28 21:04:57 +0300
+
+
+Started GET "/assets/jquery.self-a714331225dda820228db323939889f149aec0127aeb06255646b616ba1ca419.js?body=1" for 127.0.0.1 at 2015-10-28 21:04:57 +0300
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for 127.0.0.1 at 2015-10-28 21:04:57 +0300
+
+
+Started GET "/assets/home.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2015-10-28 21:04:57 +0300
+
+
+Started GET "/assets/websitesis.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2015-10-28 21:04:57 +0300
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for 127.0.0.1 at 2015-10-28 21:04:57 +0300
+
+
+Started GET "/" for 127.0.0.1 at 2015-10-28 21:04:57 +0300
+Processing by HomeController#index as HTML
+  [1m[36mWebsitesi Load (0.3ms)[0m  [1mSELECT "websitesis".* FROM "websitesis"[0m
+  Rendered home/index.html.erb within layouts/application (0.0ms)
+Completed 200 OK in 30ms (Views: 28.7ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/assets/home.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2015-10-28 21:04:57 +0300
+
+
+Started GET "/assets/scaffolds.self-75397570e7a1ff554dba3dc47300f020e17c6347615f91ff79c7737dcd1ccc2b.css?body=1" for 127.0.0.1 at 2015-10-28 21:04:57 +0300
+
+
+Started GET "/assets/websitesis.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2015-10-28 21:04:57 +0300
+
+
+Started GET "/assets/jquery.self-a714331225dda820228db323939889f149aec0127aeb06255646b616ba1ca419.js?body=1" for 127.0.0.1 at 2015-10-28 21:04:57 +0300
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for 127.0.0.1 at 2015-10-28 21:04:57 +0300
+
+
+Started GET "/assets/jquery_ujs.self-d456baa54c1fa6be2ec3711f0a72ddf7a5b2f34a6b4f515f33767d6207b7d4b3.js?body=1" for 127.0.0.1 at 2015-10-28 21:04:57 +0300
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for 127.0.0.1 at 2015-10-28 21:04:57 +0300
+
+
+Started GET "/assets/home.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2015-10-28 21:04:57 +0300
+
+
+Started GET "/assets/websitesis.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2015-10-28 21:04:57 +0300
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for 127.0.0.1 at 2015-10-28 21:04:57 +0300
+
+
+Started GET "/" for 127.0.0.1 at 2015-10-28 21:04:57 +0300
+Processing by HomeController#index as HTML
+  [1m[35mWebsitesi Load (0.1ms)[0m  SELECT "websitesis".* FROM "websitesis"
+  Rendered home/index.html.erb within layouts/application (0.0ms)
+Completed 200 OK in 28ms (Views: 26.9ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/assets/home.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2015-10-28 21:04:57 +0300
+
+
+Started GET "/assets/scaffolds.self-75397570e7a1ff554dba3dc47300f020e17c6347615f91ff79c7737dcd1ccc2b.css?body=1" for 127.0.0.1 at 2015-10-28 21:04:57 +0300
+
+
+Started GET "/assets/jquery.self-a714331225dda820228db323939889f149aec0127aeb06255646b616ba1ca419.js?body=1" for 127.0.0.1 at 2015-10-28 21:04:57 +0300
+
+
+Started GET "/assets/jquery_ujs.self-d456baa54c1fa6be2ec3711f0a72ddf7a5b2f34a6b4f515f33767d6207b7d4b3.js?body=1" for 127.0.0.1 at 2015-10-28 21:04:57 +0300
+
+
+Started GET "/assets/websitesis.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2015-10-28 21:04:57 +0300
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for 127.0.0.1 at 2015-10-28 21:04:57 +0300
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for 127.0.0.1 at 2015-10-28 21:04:57 +0300
+
+
+Started GET "/assets/home.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2015-10-28 21:04:57 +0300
+
+
+Started GET "/assets/websitesis.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2015-10-28 21:04:57 +0300
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for 127.0.0.1 at 2015-10-28 21:04:57 +0300
+
+
+Started GET "/" for 127.0.0.1 at 2015-10-28 21:04:57 +0300
+Processing by HomeController#index as HTML
+  [1m[36mWebsitesi Load (0.1ms)[0m  [1mSELECT "websitesis".* FROM "websitesis"[0m
+  Rendered home/index.html.erb within layouts/application (0.0ms)
+Completed 200 OK in 28ms (Views: 27.1ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/assets/home.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2015-10-28 21:04:57 +0300
+
+
+Started GET "/assets/scaffolds.self-75397570e7a1ff554dba3dc47300f020e17c6347615f91ff79c7737dcd1ccc2b.css?body=1" for 127.0.0.1 at 2015-10-28 21:04:57 +0300
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for 127.0.0.1 at 2015-10-28 21:04:57 +0300
+
+
+Started GET "/assets/websitesis.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2015-10-28 21:04:57 +0300
+
+
+Started GET "/assets/jquery.self-a714331225dda820228db323939889f149aec0127aeb06255646b616ba1ca419.js?body=1" for 127.0.0.1 at 2015-10-28 21:04:57 +0300
+
+
+Started GET "/assets/jquery_ujs.self-d456baa54c1fa6be2ec3711f0a72ddf7a5b2f34a6b4f515f33767d6207b7d4b3.js?body=1" for 127.0.0.1 at 2015-10-28 21:04:57 +0300
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for 127.0.0.1 at 2015-10-28 21:04:57 +0300
+
+
+Started GET "/assets/home.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2015-10-28 21:04:57 +0300
+
+
+Started GET "/assets/websitesis.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2015-10-28 21:04:57 +0300
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for 127.0.0.1 at 2015-10-28 21:04:57 +0300
+
+
+Started GET "/" for 127.0.0.1 at 2015-10-28 21:04:58 +0300
+Processing by HomeController#index as HTML
+  [1m[35mWebsitesi Load (0.2ms)[0m  SELECT "websitesis".* FROM "websitesis"
+  Rendered home/index.html.erb within layouts/application (0.0ms)
+Completed 200 OK in 27ms (Views: 26.4ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/assets/home.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2015-10-28 21:04:58 +0300
+
+
+Started GET "/assets/scaffolds.self-75397570e7a1ff554dba3dc47300f020e17c6347615f91ff79c7737dcd1ccc2b.css?body=1" for 127.0.0.1 at 2015-10-28 21:04:58 +0300
+
+
+Started GET "/assets/jquery.self-a714331225dda820228db323939889f149aec0127aeb06255646b616ba1ca419.js?body=1" for 127.0.0.1 at 2015-10-28 21:04:58 +0300
+
+
+Started GET "/assets/websitesis.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2015-10-28 21:04:58 +0300
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for 127.0.0.1 at 2015-10-28 21:04:58 +0300
+
+
+Started GET "/assets/jquery_ujs.self-d456baa54c1fa6be2ec3711f0a72ddf7a5b2f34a6b4f515f33767d6207b7d4b3.js?body=1" for 127.0.0.1 at 2015-10-28 21:04:58 +0300
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for 127.0.0.1 at 2015-10-28 21:04:58 +0300
+
+
+Started GET "/assets/home.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2015-10-28 21:04:58 +0300
+
+
+Started GET "/assets/websitesis.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2015-10-28 21:04:58 +0300
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for 127.0.0.1 at 2015-10-28 21:04:58 +0300
+
+
+Started GET "/" for 127.0.0.1 at 2015-10-28 21:04:58 +0300
+Processing by HomeController#index as HTML
+  [1m[36mWebsitesi Load (0.2ms)[0m  [1mSELECT "websitesis".* FROM "websitesis"[0m
+  Rendered home/index.html.erb within layouts/application (0.0ms)
+Completed 200 OK in 27ms (Views: 26.3ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/assets/scaffolds.self-75397570e7a1ff554dba3dc47300f020e17c6347615f91ff79c7737dcd1ccc2b.css?body=1" for 127.0.0.1 at 2015-10-28 21:04:58 +0300
+
+
+Started GET "/assets/home.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2015-10-28 21:04:58 +0300
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for 127.0.0.1 at 2015-10-28 21:04:58 +0300
+
+
+Started GET "/assets/jquery_ujs.self-d456baa54c1fa6be2ec3711f0a72ddf7a5b2f34a6b4f515f33767d6207b7d4b3.js?body=1" for 127.0.0.1 at 2015-10-28 21:04:58 +0300
+
+
+Started GET "/assets/websitesis.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2015-10-28 21:04:58 +0300
+
+
+Started GET "/assets/jquery.self-a714331225dda820228db323939889f149aec0127aeb06255646b616ba1ca419.js?body=1" for 127.0.0.1 at 2015-10-28 21:04:58 +0300
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for 127.0.0.1 at 2015-10-28 21:04:58 +0300
+
+
+Started GET "/assets/home.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2015-10-28 21:04:58 +0300
+
+
+Started GET "/assets/websitesis.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2015-10-28 21:04:58 +0300
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for 127.0.0.1 at 2015-10-28 21:04:58 +0300
+
+
+Started GET "/websitesis/new" for 127.0.0.1 at 2015-10-28 21:05:24 +0300
+Processing by WebsitesisController#new as HTML
+  Rendered websitesis/_form.html.erb (1.2ms)
+  Rendered websitesis/new.html.erb within layouts/application (2.0ms)
+Completed 200 OK in 43ms (Views: 41.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/websitesis/new" for 127.0.0.1 at 2015-10-28 21:05:26 +0300
+Processing by WebsitesisController#new as HTML
+  Rendered websitesis/_form.html.erb (0.8ms)
+  Rendered websitesis/new.html.erb within layouts/application (1.3ms)
+Completed 200 OK in 20ms (Views: 19.7ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/websitesis" for 127.0.0.1 at 2015-10-28 21:05:27 +0300
+Processing by WebsitesisController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"WEzjViWCcoZd3I/NuAWQNCxLJnv+DVf0YShPK74Zm+5YELGcQQPvSuEnLeMxZL3kSbGDC7i2OjWidBSrIqVzcQ==", "websitesi"=>{"adresi"=>"https://wordpress.com/"}, "commit"=>"Create Websitesi"}
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "websitesis" ("adresi", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["adresi", "https://wordpress.com/"], ["created_at", "2015-10-28 18:05:27.908160"], ["updated_at", "2015-10-28 18:05:27.908160"]]
+  [1m[35m (259.1ms)[0m  commit transaction
+Redirected to http://localhost:3000/websitesis/4
+Completed 302 Found in 261ms (ActiveRecord: 259.3ms)
+
+
+Started GET "/websitesis/4" for 127.0.0.1 at 2015-10-28 21:05:28 +0300
+Processing by WebsitesisController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mWebsitesi Load (0.1ms)[0m  [1mSELECT  "websitesis".* FROM "websitesis" WHERE "websitesis"."id" = ? LIMIT 1[0m  [["id", 4]]
+  Rendered websitesis/show.html.erb within layouts/application (0.3ms)
+Completed 200 OK in 23ms (Views: 22.5ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/websitesis" for 127.0.0.1 at 2015-10-28 21:05:30 +0300
+Processing by WebsitesisController#index as HTML
+  [1m[35mWebsitesi Load (0.1ms)[0m  SELECT "websitesis".* FROM "websitesis"
+  Rendered websitesis/index.html.erb within layouts/application (1.2ms)
+Completed 200 OK in 22ms (Views: 21.7ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/websitesis/new" for 127.0.0.1 at 2015-10-28 21:05:31 +0300
+Processing by WebsitesisController#new as HTML
+  Rendered websitesis/_form.html.erb (0.8ms)
+  Rendered websitesis/new.html.erb within layouts/application (1.2ms)
+Completed 200 OK in 21ms (Views: 20.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/websitesis/new" for 127.0.0.1 at 2015-10-28 21:05:42 +0300
+Processing by WebsitesisController#new as HTML
+  Rendered websitesis/_form.html.erb (0.7ms)
+  Rendered websitesis/new.html.erb within layouts/application (1.1ms)
+Completed 200 OK in 21ms (Views: 20.5ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/websitesis" for 127.0.0.1 at 2015-10-28 21:05:43 +0300
+Processing by WebsitesisController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"ZVXxbZHtiwWxWZQAhe8MRLiPYx3XLW7lYVWy9uwZ0jZlCaOn9WwWyQ2iNi4MjiGU3XXGbZGWAySiCel2cKU6qQ==", "websitesi"=>{"adresi"=>"https://badoo.com/"}, "commit"=>"Create Websitesi"}
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "websitesis" ("adresi", "created_at", "updated_at") VALUES (?, ?, ?)  [["adresi", "https://badoo.com/"], ["created_at", "2015-10-28 18:05:43.332589"], ["updated_at", "2015-10-28 18:05:43.332589"]]
+  [1m[36m (191.9ms)[0m  [1mcommit transaction[0m
+Redirected to http://localhost:3000/websitesis/5
+Completed 302 Found in 194ms (ActiveRecord: 192.1ms)
+
+
+Started GET "/websitesis/5" for 127.0.0.1 at 2015-10-28 21:05:43 +0300
+Processing by WebsitesisController#show as HTML
+  Parameters: {"id"=>"5"}
+  [1m[35mWebsitesi Load (0.1ms)[0m  SELECT  "websitesis".* FROM "websitesis" WHERE "websitesis"."id" = ? LIMIT 1  [["id", 5]]
+  Rendered websitesis/show.html.erb within layouts/application (0.2ms)
+Completed 200 OK in 21ms (Views: 19.6ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/websitesis/5/edit" for 127.0.0.1 at 2015-10-28 21:05:44 +0300
+Processing by WebsitesisController#edit as HTML
+  Parameters: {"id"=>"5"}
+  [1m[36mWebsitesi Load (0.1ms)[0m  [1mSELECT  "websitesis".* FROM "websitesis" WHERE "websitesis"."id" = ? LIMIT 1[0m  [["id", 5]]
+  Rendered websitesis/_form.html.erb (0.8ms)
+  Rendered websitesis/edit.html.erb within layouts/application (1.5ms)
+Completed 200 OK in 20ms (Views: 19.3ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/websitesis" for 127.0.0.1 at 2015-10-28 21:05:46 +0300
+Processing by WebsitesisController#index as HTML
+  [1m[35mWebsitesi Load (0.1ms)[0m  SELECT "websitesis".* FROM "websitesis"
+  Rendered websitesis/index.html.erb within layouts/application (1.1ms)
+Completed 200 OK in 20ms (Views: 19.2ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/websitesis" for 127.0.0.1 at 2015-10-28 21:05:47 +0300
+Processing by WebsitesisController#index as HTML
+  [1m[36mWebsitesi Load (0.1ms)[0m  [1mSELECT "websitesis".* FROM "websitesis"[0m
+  Rendered websitesis/index.html.erb within layouts/application (1.1ms)
+Completed 200 OK in 20ms (Views: 19.1ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/websitesis/new" for 127.0.0.1 at 2015-10-28 21:05:48 +0300
+Processing by WebsitesisController#new as HTML
+  Rendered websitesis/_form.html.erb (0.8ms)
+  Rendered websitesis/new.html.erb within layouts/application (1.2ms)
+Completed 200 OK in 20ms (Views: 19.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/websitesis/new" for 127.0.0.1 at 2015-10-28 21:05:58 +0300
+Processing by WebsitesisController#new as HTML
+  Rendered websitesis/_form.html.erb (0.7ms)
+  Rendered websitesis/new.html.erb within layouts/application (1.1ms)
+Completed 200 OK in 25ms (Views: 24.1ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/websitesis" for 127.0.0.1 at 2015-10-28 21:06:00 +0300
+Processing by WebsitesisController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"sqXxRe9A9RcLZZWWuz1Jb2KudH2EHjGZJn18UX4ARrGy+aOPi8Fo27eeN7gyXGS/B1TRDcKlXFjlISfR4ryuLg==", "websitesi"=>{"adresi"=>"http://www.msn.com/tr-tr"}, "commit"=>"Create Websitesi"}
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "websitesis" ("adresi", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["adresi", "http://www.msn.com/tr-tr"], ["created_at", "2015-10-28 18:06:00.479130"], ["updated_at", "2015-10-28 18:06:00.479130"]]
+  [1m[35m (321.6ms)[0m  commit transaction
+Redirected to http://localhost:3000/websitesis/6
+Completed 302 Found in 324ms (ActiveRecord: 321.8ms)
+
+
+Started GET "/websitesis/6" for 127.0.0.1 at 2015-10-28 21:06:00 +0300
+Processing by WebsitesisController#show as HTML
+  Parameters: {"id"=>"6"}
+  [1m[36mWebsitesi Load (0.1ms)[0m  [1mSELECT  "websitesis".* FROM "websitesis" WHERE "websitesis"."id" = ? LIMIT 1[0m  [["id", 6]]
+  Rendered websitesis/show.html.erb within layouts/application (0.2ms)
+Completed 200 OK in 28ms (Views: 18.9ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/websitesis" for 127.0.0.1 at 2015-10-28 21:06:02 +0300
+Processing by WebsitesisController#index as HTML
+  [1m[35mWebsitesi Load (0.2ms)[0m  SELECT "websitesis".* FROM "websitesis"
+  Rendered websitesis/index.html.erb within layouts/application (2.3ms)
+Completed 200 OK in 27ms (Views: 26.1ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/websitesis/new" for 127.0.0.1 at 2015-10-28 21:06:08 +0300
+Processing by WebsitesisController#new as HTML
+  Rendered websitesis/_form.html.erb (0.7ms)
+  Rendered websitesis/new.html.erb within layouts/application (1.1ms)
+Completed 200 OK in 20ms (Views: 19.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/websitesis/new" for 127.0.0.1 at 2015-10-28 21:06:09 +0300
+Processing by WebsitesisController#new as HTML
+  Rendered websitesis/_form.html.erb (1.2ms)
+  Rendered websitesis/new.html.erb within layouts/application (1.9ms)
+Completed 200 OK in 27ms (Views: 26.3ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/websitesis" for 127.0.0.1 at 2015-10-28 21:06:11 +0300
+Processing by WebsitesisController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"QDn15d5rFD3JskTKBNZ5/FXPXjFqVUSIYDr+259gD8pAZacvuuqJ8XVJ5uSNt1QsMDX7QSzuKUmjZqVbA9znVQ==", "websitesi"=>{"adresi"=>"https://www.linkedin.com/"}, "commit"=>"Create Websitesi"}
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "websitesis" ("adresi", "created_at", "updated_at") VALUES (?, ?, ?)  [["adresi", "https://www.linkedin.com/"], ["created_at", "2015-10-28 18:06:11.364730"], ["updated_at", "2015-10-28 18:06:11.364730"]]
+  [1m[36m (243.8ms)[0m  [1mcommit transaction[0m
+Redirected to http://localhost:3000/websitesis/7
+Completed 302 Found in 246ms (ActiveRecord: 244.0ms)
+
+
+Started GET "/websitesis/7" for 127.0.0.1 at 2015-10-28 21:06:11 +0300
+Processing by WebsitesisController#show as HTML
+  Parameters: {"id"=>"7"}
+  [1m[35mWebsitesi Load (0.1ms)[0m  SELECT  "websitesis".* FROM "websitesis" WHERE "websitesis"."id" = ? LIMIT 1  [["id", 7]]
+  Rendered websitesis/show.html.erb within layouts/application (0.2ms)
+Completed 200 OK in 22ms (Views: 21.2ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/websitesis" for 127.0.0.1 at 2015-10-28 21:06:13 +0300
+Processing by WebsitesisController#index as HTML
+  [1m[36mWebsitesi Load (0.1ms)[0m  [1mSELECT "websitesis".* FROM "websitesis"[0m
+  Rendered websitesis/index.html.erb within layouts/application (1.9ms)
+Completed 200 OK in 22ms (Views: 21.7ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/websitesis/new" for 127.0.0.1 at 2015-10-28 21:06:14 +0300
+Processing by WebsitesisController#new as HTML
+  Rendered websitesis/_form.html.erb (0.7ms)
+  Rendered websitesis/new.html.erb within layouts/application (1.1ms)
+Completed 200 OK in 25ms (Views: 24.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/websitesis/new" for 127.0.0.1 at 2015-10-28 21:06:20 +0300
+Processing by WebsitesisController#new as HTML
+  Rendered websitesis/_form.html.erb (0.7ms)
+  Rendered websitesis/new.html.erb within layouts/application (1.1ms)
+Completed 200 OK in 19ms (Views: 19.1ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/websitesis" for 127.0.0.1 at 2015-10-28 21:06:22 +0300
+Processing by WebsitesisController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"SRIIJ/1bXMZU1u5T65y3d9EscFZgQZm0Y+CkuWKpf2tJTlrtmdrBCugtTH1i/ZqntNbVJib69HWgvP85/hWX9A==", "websitesi"=>{"adresi"=>"http://www.bebo.com/"}, "commit"=>"Create Websitesi"}
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "websitesis" ("adresi", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["adresi", "http://www.bebo.com/"], ["created_at", "2015-10-28 18:06:22.117204"], ["updated_at", "2015-10-28 18:06:22.117204"]]
+  [1m[35m (217.5ms)[0m  commit transaction
+Redirected to http://localhost:3000/websitesis/8
+Completed 302 Found in 220ms (ActiveRecord: 217.7ms)
+
+
+Started GET "/websitesis/8" for 127.0.0.1 at 2015-10-28 21:06:22 +0300
+Processing by WebsitesisController#show as HTML
+  Parameters: {"id"=>"8"}
+  [1m[36mWebsitesi Load (0.1ms)[0m  [1mSELECT  "websitesis".* FROM "websitesis" WHERE "websitesis"."id" = ? LIMIT 1[0m  [["id", 8]]
+  Rendered websitesis/show.html.erb within layouts/application (0.2ms)
+Completed 200 OK in 20ms (Views: 19.1ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/websitesis/8/edit" for 127.0.0.1 at 2015-10-28 21:06:23 +0300
+Processing by WebsitesisController#edit as HTML
+  Parameters: {"id"=>"8"}
+  [1m[35mWebsitesi Load (0.1ms)[0m  SELECT  "websitesis".* FROM "websitesis" WHERE "websitesis"."id" = ? LIMIT 1  [["id", 8]]
+  Rendered websitesis/_form.html.erb (0.8ms)
+  Rendered websitesis/edit.html.erb within layouts/application (1.3ms)
+Completed 200 OK in 22ms (Views: 21.1ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/websitesis" for 127.0.0.1 at 2015-10-28 21:06:24 +0300
+Processing by WebsitesisController#index as HTML
+  [1m[36mWebsitesi Load (0.2ms)[0m  [1mSELECT "websitesis".* FROM "websitesis"[0m
+  Rendered websitesis/index.html.erb within layouts/application (1.9ms)
+Completed 200 OK in 21ms (Views: 20.5ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/websitesis" for 127.0.0.1 at 2015-10-28 21:06:25 +0300
+Processing by WebsitesisController#index as HTML
+  [1m[35mWebsitesi Load (0.1ms)[0m  SELECT "websitesis".* FROM "websitesis"
+  Rendered websitesis/index.html.erb within layouts/application (1.5ms)
+Completed 200 OK in 22ms (Views: 21.5ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/websitesis/new" for 127.0.0.1 at 2015-10-28 21:06:26 +0300
+Processing by WebsitesisController#new as HTML
+  Rendered websitesis/_form.html.erb (0.8ms)
+  Rendered websitesis/new.html.erb within layouts/application (1.2ms)
+Completed 200 OK in 27ms (Views: 26.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/websitesis/new" for 127.0.0.1 at 2015-10-28 21:06:33 +0300
+Processing by WebsitesisController#new as HTML
+  Rendered websitesis/_form.html.erb (0.8ms)
+  Rendered websitesis/new.html.erb within layouts/application (1.4ms)
+Completed 200 OK in 20ms (Views: 19.8ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/websitesis" for 127.0.0.1 at 2015-10-28 21:06:34 +0300
+Processing by WebsitesisController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"TUIqFl5oiwSW6DFmCY5okbOuYszST3cTVwFiNBjIuLpNHnjcOukWyCoTk0iA70VB1lTHvJT0GtKUXTm0hHRQJQ==", "websitesi"=>{"adresi"=>"http://vk.com/"}, "commit"=>"Create Websitesi"}
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "websitesis" ("adresi", "created_at", "updated_at") VALUES (?, ?, ?)  [["adresi", "http://vk.com/"], ["created_at", "2015-10-28 18:06:34.373006"], ["updated_at", "2015-10-28 18:06:34.373006"]]
+  [1m[36m (199.4ms)[0m  [1mcommit transaction[0m
+Redirected to http://localhost:3000/websitesis/9
+Completed 302 Found in 202ms (ActiveRecord: 199.6ms)
+
+
+Started GET "/websitesis/9" for 127.0.0.1 at 2015-10-28 21:06:34 +0300
+Processing by WebsitesisController#show as HTML
+  Parameters: {"id"=>"9"}
+  [1m[35mWebsitesi Load (0.2ms)[0m  SELECT  "websitesis".* FROM "websitesis" WHERE "websitesis"."id" = ? LIMIT 1  [["id", 9]]
+  Rendered websitesis/show.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 31ms (Views: 30.1ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/" for 127.0.0.1 at 2015-10-28 21:06:40 +0300
+Processing by HomeController#index as HTML
+  [1m[36mWebsitesi Load (0.1ms)[0m  [1mSELECT "websitesis".* FROM "websitesis"[0m
+  Rendered home/index.html.erb within layouts/application (0.1ms)
+Completed 200 OK in 24ms (Views: 23.3ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/" for 127.0.0.1 at 2015-10-28 21:06:42 +0300
+Processing by HomeController#index as HTML
+  [1m[35mWebsitesi Load (0.1ms)[0m  SELECT "websitesis".* FROM "websitesis"
+  Rendered home/index.html.erb within layouts/application (0.0ms)
+Completed 200 OK in 19ms (Views: 18.6ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/assets/home.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2015-10-28 21:06:42 +0300
+
+
+Started GET "/assets/scaffolds.self-75397570e7a1ff554dba3dc47300f020e17c6347615f91ff79c7737dcd1ccc2b.css?body=1" for 127.0.0.1 at 2015-10-28 21:06:42 +0300
+
+
+Started GET "/assets/jquery_ujs.self-d456baa54c1fa6be2ec3711f0a72ddf7a5b2f34a6b4f515f33767d6207b7d4b3.js?body=1" for 127.0.0.1 at 2015-10-28 21:06:42 +0300
+
+
+Started GET "/assets/jquery.self-a714331225dda820228db323939889f149aec0127aeb06255646b616ba1ca419.js?body=1" for 127.0.0.1 at 2015-10-28 21:06:42 +0300
+
+
+Started GET "/assets/websitesis.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2015-10-28 21:06:42 +0300
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for 127.0.0.1 at 2015-10-28 21:06:42 +0300
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for 127.0.0.1 at 2015-10-28 21:06:42 +0300
+
+
+Started GET "/assets/home.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2015-10-28 21:06:42 +0300
+
+
+Started GET "/assets/websitesis.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2015-10-28 21:06:42 +0300
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for 127.0.0.1 at 2015-10-28 21:06:42 +0300
+
+
+Started GET "/" for 127.0.0.1 at 2015-10-28 21:06:43 +0300
+Processing by HomeController#index as HTML
+  [1m[36mWebsitesi Load (0.1ms)[0m  [1mSELECT "websitesis".* FROM "websitesis"[0m
+  Rendered home/index.html.erb within layouts/application (0.0ms)
+Completed 200 OK in 34ms (Views: 32.9ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/assets/home.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2015-10-28 21:06:43 +0300
+
+
+Started GET "/assets/jquery.self-a714331225dda820228db323939889f149aec0127aeb06255646b616ba1ca419.js?body=1" for 127.0.0.1 at 2015-10-28 21:06:43 +0300
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for 127.0.0.1 at 2015-10-28 21:06:43 +0300
+
+
+Started GET "/assets/websitesis.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2015-10-28 21:06:43 +0300
+
+
+Started GET "/assets/scaffolds.self-75397570e7a1ff554dba3dc47300f020e17c6347615f91ff79c7737dcd1ccc2b.css?body=1" for 127.0.0.1 at 2015-10-28 21:06:43 +0300
+
+
+Started GET "/assets/jquery_ujs.self-d456baa54c1fa6be2ec3711f0a72ddf7a5b2f34a6b4f515f33767d6207b7d4b3.js?body=1" for 127.0.0.1 at 2015-10-28 21:06:43 +0300
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for 127.0.0.1 at 2015-10-28 21:06:43 +0300
+
+
+Started GET "/assets/home.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2015-10-28 21:06:43 +0300
+
+
+Started GET "/assets/websitesis.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2015-10-28 21:06:43 +0300
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for 127.0.0.1 at 2015-10-28 21:06:43 +0300
+
+
+Started GET "/" for 127.0.0.1 at 2015-10-28 21:06:43 +0300
+Processing by HomeController#index as HTML
+  [1m[35mWebsitesi Load (0.1ms)[0m  SELECT "websitesis".* FROM "websitesis"
+  Rendered home/index.html.erb within layouts/application (0.0ms)
+Completed 200 OK in 21ms (Views: 19.8ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/assets/websitesis.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2015-10-28 21:06:43 +0300
+
+
+Started GET "/assets/home.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2015-10-28 21:06:43 +0300
+
+
+Started GET "/assets/jquery_ujs.self-d456baa54c1fa6be2ec3711f0a72ddf7a5b2f34a6b4f515f33767d6207b7d4b3.js?body=1" for 127.0.0.1 at 2015-10-28 21:06:43 +0300
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for 127.0.0.1 at 2015-10-28 21:06:43 +0300
+
+
+Started GET "/assets/scaffolds.self-75397570e7a1ff554dba3dc47300f020e17c6347615f91ff79c7737dcd1ccc2b.css?body=1" for 127.0.0.1 at 2015-10-28 21:06:43 +0300
+
+
+Started GET "/assets/jquery.self-a714331225dda820228db323939889f149aec0127aeb06255646b616ba1ca419.js?body=1" for 127.0.0.1 at 2015-10-28 21:06:43 +0300
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for 127.0.0.1 at 2015-10-28 21:06:43 +0300
+
+
+Started GET "/assets/home.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2015-10-28 21:06:43 +0300
+
+
+Started GET "/assets/websitesis.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2015-10-28 21:06:43 +0300
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for 127.0.0.1 at 2015-10-28 21:06:43 +0300
+
+
+Started GET "/" for 127.0.0.1 at 2015-10-28 21:06:44 +0300
+Processing by HomeController#index as HTML
+  [1m[36mWebsitesi Load (0.1ms)[0m  [1mSELECT "websitesis".* FROM "websitesis"[0m
+  Rendered home/index.html.erb within layouts/application (0.0ms)
+Completed 200 OK in 21ms (Views: 19.6ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/assets/scaffolds.self-75397570e7a1ff554dba3dc47300f020e17c6347615f91ff79c7737dcd1ccc2b.css?body=1" for 127.0.0.1 at 2015-10-28 21:06:44 +0300
+
+
+Started GET "/assets/home.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2015-10-28 21:06:44 +0300
+
+
+Started GET "/assets/jquery.self-a714331225dda820228db323939889f149aec0127aeb06255646b616ba1ca419.js?body=1" for 127.0.0.1 at 2015-10-28 21:06:44 +0300
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for 127.0.0.1 at 2015-10-28 21:06:44 +0300
+
+
+Started GET "/assets/websitesis.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2015-10-28 21:06:44 +0300
+
+
+Started GET "/assets/jquery_ujs.self-d456baa54c1fa6be2ec3711f0a72ddf7a5b2f34a6b4f515f33767d6207b7d4b3.js?body=1" for 127.0.0.1 at 2015-10-28 21:06:44 +0300
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for 127.0.0.1 at 2015-10-28 21:06:44 +0300
+
+
+Started GET "/assets/home.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2015-10-28 21:06:44 +0300
+
+
+Started GET "/assets/websitesis.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2015-10-28 21:06:44 +0300
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for 127.0.0.1 at 2015-10-28 21:06:44 +0300
+
+
+Started GET "/" for 127.0.0.1 at 2015-10-28 21:06:45 +0300
+Processing by HomeController#index as HTML
+  [1m[35mWebsitesi Load (0.2ms)[0m  SELECT "websitesis".* FROM "websitesis"
+  Rendered home/index.html.erb within layouts/application (0.0ms)
+Completed 200 OK in 23ms (Views: 21.9ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/assets/home.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2015-10-28 21:06:45 +0300
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for 127.0.0.1 at 2015-10-28 21:06:45 +0300
+
+
+Started GET "/assets/scaffolds.self-75397570e7a1ff554dba3dc47300f020e17c6347615f91ff79c7737dcd1ccc2b.css?body=1" for 127.0.0.1 at 2015-10-28 21:06:45 +0300
+
+
+Started GET "/assets/jquery.self-a714331225dda820228db323939889f149aec0127aeb06255646b616ba1ca419.js?body=1" for 127.0.0.1 at 2015-10-28 21:06:45 +0300
+
+
+Started GET "/assets/jquery_ujs.self-d456baa54c1fa6be2ec3711f0a72ddf7a5b2f34a6b4f515f33767d6207b7d4b3.js?body=1" for 127.0.0.1 at 2015-10-28 21:06:45 +0300
+
+
+Started GET "/assets/websitesis.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2015-10-28 21:06:45 +0300
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for 127.0.0.1 at 2015-10-28 21:06:45 +0300
+
+
+Started GET "/assets/home.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2015-10-28 21:06:45 +0300
+
+
+Started GET "/assets/websitesis.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2015-10-28 21:06:45 +0300
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for 127.0.0.1 at 2015-10-28 21:06:45 +0300
+
+
+Started GET "/" for 127.0.0.1 at 2015-10-28 21:06:45 +0300
+Processing by HomeController#index as HTML
+  [1m[36mWebsitesi Load (0.1ms)[0m  [1mSELECT "websitesis".* FROM "websitesis"[0m
+  Rendered home/index.html.erb within layouts/application (0.0ms)
+Completed 200 OK in 22ms (Views: 21.4ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/assets/home.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2015-10-28 21:06:45 +0300
+
+
+Started GET "/assets/scaffolds.self-75397570e7a1ff554dba3dc47300f020e17c6347615f91ff79c7737dcd1ccc2b.css?body=1" for 127.0.0.1 at 2015-10-28 21:06:45 +0300
+
+
+Started GET "/assets/jquery.self-a714331225dda820228db323939889f149aec0127aeb06255646b616ba1ca419.js?body=1" for 127.0.0.1 at 2015-10-28 21:06:45 +0300
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for 127.0.0.1 at 2015-10-28 21:06:45 +0300
+
+
+Started GET "/assets/jquery_ujs.self-d456baa54c1fa6be2ec3711f0a72ddf7a5b2f34a6b4f515f33767d6207b7d4b3.js?body=1" for 127.0.0.1 at 2015-10-28 21:06:45 +0300
+
+
+Started GET "/assets/websitesis.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2015-10-28 21:06:45 +0300
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for 127.0.0.1 at 2015-10-28 21:06:45 +0300
+
+
+Started GET "/assets/home.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2015-10-28 21:06:45 +0300
+
+
+Started GET "/assets/websitesis.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2015-10-28 21:06:45 +0300
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for 127.0.0.1 at 2015-10-28 21:06:45 +0300
+
+
+Started GET "/" for 127.0.0.1 at 2015-10-28 21:06:46 +0300
+Processing by HomeController#index as HTML
+  [1m[35mWebsitesi Load (0.1ms)[0m  SELECT "websitesis".* FROM "websitesis"
+  Rendered home/index.html.erb within layouts/application (0.1ms)
+Completed 200 OK in 22ms (Views: 21.3ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/assets/home.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2015-10-28 21:06:46 +0300
+
+
+Started GET "/assets/scaffolds.self-75397570e7a1ff554dba3dc47300f020e17c6347615f91ff79c7737dcd1ccc2b.css?body=1" for 127.0.0.1 at 2015-10-28 21:06:46 +0300
+
+
+Started GET "/assets/jquery_ujs.self-d456baa54c1fa6be2ec3711f0a72ddf7a5b2f34a6b4f515f33767d6207b7d4b3.js?body=1" for 127.0.0.1 at 2015-10-28 21:06:46 +0300
+
+
+Started GET "/assets/jquery.self-a714331225dda820228db323939889f149aec0127aeb06255646b616ba1ca419.js?body=1" for 127.0.0.1 at 2015-10-28 21:06:46 +0300
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for 127.0.0.1 at 2015-10-28 21:06:46 +0300
+
+
+Started GET "/assets/websitesis.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2015-10-28 21:06:46 +0300
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for 127.0.0.1 at 2015-10-28 21:06:46 +0300
+
+
+Started GET "/assets/home.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2015-10-28 21:06:46 +0300
+
+
+Started GET "/assets/websitesis.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2015-10-28 21:06:46 +0300
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for 127.0.0.1 at 2015-10-28 21:06:46 +0300
+
+
+Started GET "/" for 127.0.0.1 at 2015-10-28 21:06:46 +0300
+Processing by HomeController#index as HTML
+  [1m[36mWebsitesi Load (0.1ms)[0m  [1mSELECT "websitesis".* FROM "websitesis"[0m
+  Rendered home/index.html.erb within layouts/application (0.0ms)
+Completed 200 OK in 19ms (Views: 18.1ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/assets/home.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2015-10-28 21:06:46 +0300
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for 127.0.0.1 at 2015-10-28 21:06:46 +0300
+
+
+Started GET "/assets/scaffolds.self-75397570e7a1ff554dba3dc47300f020e17c6347615f91ff79c7737dcd1ccc2b.css?body=1" for 127.0.0.1 at 2015-10-28 21:06:46 +0300
+
+
+Started GET "/assets/websitesis.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2015-10-28 21:06:46 +0300
+
+
+Started GET "/assets/jquery_ujs.self-d456baa54c1fa6be2ec3711f0a72ddf7a5b2f34a6b4f515f33767d6207b7d4b3.js?body=1" for 127.0.0.1 at 2015-10-28 21:06:46 +0300
+
+
+Started GET "/assets/jquery.self-a714331225dda820228db323939889f149aec0127aeb06255646b616ba1ca419.js?body=1" for 127.0.0.1 at 2015-10-28 21:06:46 +0300
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for 127.0.0.1 at 2015-10-28 21:06:46 +0300
+
+
+Started GET "/assets/home.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2015-10-28 21:06:46 +0300
+
+
+Started GET "/assets/websitesis.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2015-10-28 21:06:46 +0300
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for 127.0.0.1 at 2015-10-28 21:06:46 +0300
+
+
+Started GET "/" for 127.0.0.1 at 2015-10-28 21:06:47 +0300
+Processing by HomeController#index as HTML
+  [1m[35mWebsitesi Load (0.1ms)[0m  SELECT "websitesis".* FROM "websitesis"
+  Rendered home/index.html.erb within layouts/application (0.0ms)
+Completed 200 OK in 19ms (Views: 17.9ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/assets/home.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2015-10-28 21:06:47 +0300
+
+
+Started GET "/assets/scaffolds.self-75397570e7a1ff554dba3dc47300f020e17c6347615f91ff79c7737dcd1ccc2b.css?body=1" for 127.0.0.1 at 2015-10-28 21:06:47 +0300
+
+
+Started GET "/assets/websitesis.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2015-10-28 21:06:47 +0300
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for 127.0.0.1 at 2015-10-28 21:06:47 +0300
+
+
+Started GET "/assets/jquery_ujs.self-d456baa54c1fa6be2ec3711f0a72ddf7a5b2f34a6b4f515f33767d6207b7d4b3.js?body=1" for 127.0.0.1 at 2015-10-28 21:06:47 +0300
+
+
+Started GET "/assets/jquery.self-a714331225dda820228db323939889f149aec0127aeb06255646b616ba1ca419.js?body=1" for 127.0.0.1 at 2015-10-28 21:06:47 +0300
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for 127.0.0.1 at 2015-10-28 21:06:47 +0300
+
+
+Started GET "/assets/home.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2015-10-28 21:06:47 +0300
+
+
+Started GET "/assets/websitesis.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2015-10-28 21:06:47 +0300
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for 127.0.0.1 at 2015-10-28 21:06:47 +0300
+
+
+Started GET "/" for 127.0.0.1 at 2015-10-28 21:06:47 +0300
+Processing by HomeController#index as HTML
+  [1m[36mWebsitesi Load (0.1ms)[0m  [1mSELECT "websitesis".* FROM "websitesis"[0m
+  Rendered home/index.html.erb within layouts/application (0.0ms)
+Completed 200 OK in 25ms (Views: 23.8ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/assets/home.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2015-10-28 21:06:47 +0300
+
+
+Started GET "/assets/websitesis.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2015-10-28 21:06:47 +0300
+
+
+Started GET "/assets/scaffolds.self-75397570e7a1ff554dba3dc47300f020e17c6347615f91ff79c7737dcd1ccc2b.css?body=1" for 127.0.0.1 at 2015-10-28 21:06:47 +0300
+
+
+Started GET "/assets/jquery.self-a714331225dda820228db323939889f149aec0127aeb06255646b616ba1ca419.js?body=1" for 127.0.0.1 at 2015-10-28 21:06:47 +0300
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for 127.0.0.1 at 2015-10-28 21:06:47 +0300
+
+
+Started GET "/assets/jquery_ujs.self-d456baa54c1fa6be2ec3711f0a72ddf7a5b2f34a6b4f515f33767d6207b7d4b3.js?body=1" for 127.0.0.1 at 2015-10-28 21:06:47 +0300
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for 127.0.0.1 at 2015-10-28 21:06:47 +0300
+
+
+Started GET "/assets/home.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2015-10-28 21:06:47 +0300
+
+
+Started GET "/assets/websitesis.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2015-10-28 21:06:47 +0300
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for 127.0.0.1 at 2015-10-28 21:06:47 +0300
+
+
+Started GET "/" for 127.0.0.1 at 2015-10-28 21:06:47 +0300
+Processing by HomeController#index as HTML
+  [1m[35mWebsitesi Load (0.1ms)[0m  SELECT "websitesis".* FROM "websitesis"
+  Rendered home/index.html.erb within layouts/application (0.0ms)
+Completed 200 OK in 25ms (Views: 24.3ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/assets/home.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2015-10-28 21:06:47 +0300
+
+
+Started GET "/assets/scaffolds.self-75397570e7a1ff554dba3dc47300f020e17c6347615f91ff79c7737dcd1ccc2b.css?body=1" for 127.0.0.1 at 2015-10-28 21:06:47 +0300
+
+
+Started GET "/assets/jquery.self-a714331225dda820228db323939889f149aec0127aeb06255646b616ba1ca419.js?body=1" for 127.0.0.1 at 2015-10-28 21:06:47 +0300
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for 127.0.0.1 at 2015-10-28 21:06:47 +0300
+
+
+Started GET "/assets/jquery_ujs.self-d456baa54c1fa6be2ec3711f0a72ddf7a5b2f34a6b4f515f33767d6207b7d4b3.js?body=1" for 127.0.0.1 at 2015-10-28 21:06:47 +0300
+
+
+Started GET "/assets/websitesis.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2015-10-28 21:06:47 +0300
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for 127.0.0.1 at 2015-10-28 21:06:47 +0300
+
+
+Started GET "/assets/home.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2015-10-28 21:06:47 +0300
+
+
+Started GET "/assets/websitesis.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2015-10-28 21:06:47 +0300
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for 127.0.0.1 at 2015-10-28 21:06:47 +0300
+
+
+Started GET "/" for 127.0.0.1 at 2015-10-28 21:06:47 +0300
+Processing by HomeController#index as HTML
+  [1m[36mWebsitesi Load (0.6ms)[0m  [1mSELECT "websitesis".* FROM "websitesis"[0m
+  Rendered home/index.html.erb within layouts/application (0.0ms)
+Completed 200 OK in 37ms (Views: 34.5ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/assets/home.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2015-10-28 21:06:47 +0300
+
+
+Started GET "/assets/scaffolds.self-75397570e7a1ff554dba3dc47300f020e17c6347615f91ff79c7737dcd1ccc2b.css?body=1" for 127.0.0.1 at 2015-10-28 21:06:47 +0300
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for 127.0.0.1 at 2015-10-28 21:06:47 +0300
+
+
+Started GET "/assets/jquery_ujs.self-d456baa54c1fa6be2ec3711f0a72ddf7a5b2f34a6b4f515f33767d6207b7d4b3.js?body=1" for 127.0.0.1 at 2015-10-28 21:06:47 +0300
+
+
+Started GET "/assets/websitesis.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2015-10-28 21:06:47 +0300
+
+
+Started GET "/assets/jquery.self-a714331225dda820228db323939889f149aec0127aeb06255646b616ba1ca419.js?body=1" for 127.0.0.1 at 2015-10-28 21:06:47 +0300
+
+
+Started GET "/assets/home.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2015-10-28 21:06:47 +0300
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for 127.0.0.1 at 2015-10-28 21:06:47 +0300
+
+
+Started GET "/assets/websitesis.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2015-10-28 21:06:47 +0300
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for 127.0.0.1 at 2015-10-28 21:06:47 +0300
+
+
+Started GET "/" for 127.0.0.1 at 2015-10-28 21:06:47 +0300
+Processing by HomeController#index as HTML
+  [1m[35mWebsitesi Load (0.1ms)[0m  SELECT "websitesis".* FROM "websitesis"
+  Rendered home/index.html.erb within layouts/application (0.0ms)
+Completed 200 OK in 29ms (Views: 27.7ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/assets/home.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2015-10-28 21:06:47 +0300
+
+
+Started GET "/assets/scaffolds.self-75397570e7a1ff554dba3dc47300f020e17c6347615f91ff79c7737dcd1ccc2b.css?body=1" for 127.0.0.1 at 2015-10-28 21:06:47 +0300
+
+
+Started GET "/assets/websitesis.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2015-10-28 21:06:47 +0300
+
+
+Started GET "/assets/jquery.self-a714331225dda820228db323939889f149aec0127aeb06255646b616ba1ca419.js?body=1" for 127.0.0.1 at 2015-10-28 21:06:47 +0300
+
+
+Started GET "/assets/jquery_ujs.self-d456baa54c1fa6be2ec3711f0a72ddf7a5b2f34a6b4f515f33767d6207b7d4b3.js?body=1" for 127.0.0.1 at 2015-10-28 21:06:47 +0300
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for 127.0.0.1 at 2015-10-28 21:06:47 +0300
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for 127.0.0.1 at 2015-10-28 21:06:47 +0300
+
+
+Started GET "/assets/home.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2015-10-28 21:06:47 +0300
+
+
+Started GET "/assets/websitesis.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2015-10-28 21:06:47 +0300
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for 127.0.0.1 at 2015-10-28 21:06:47 +0300
+
+
+Started GET "/" for 127.0.0.1 at 2015-10-28 21:06:47 +0300
+Processing by HomeController#index as HTML
+  [1m[36mWebsitesi Load (0.2ms)[0m  [1mSELECT "websitesis".* FROM "websitesis"[0m
+  Rendered home/index.html.erb within layouts/application (0.0ms)
+Completed 200 OK in 27ms (Views: 26.1ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/assets/home.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2015-10-28 21:06:47 +0300
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for 127.0.0.1 at 2015-10-28 21:06:47 +0300
+
+
+Started GET "/assets/websitesis.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2015-10-28 21:06:47 +0300
+
+
+Started GET "/assets/scaffolds.self-75397570e7a1ff554dba3dc47300f020e17c6347615f91ff79c7737dcd1ccc2b.css?body=1" for 127.0.0.1 at 2015-10-28 21:06:47 +0300
+
+
+Started GET "/assets/jquery.self-a714331225dda820228db323939889f149aec0127aeb06255646b616ba1ca419.js?body=1" for 127.0.0.1 at 2015-10-28 21:06:47 +0300
+
+
+Started GET "/assets/jquery_ujs.self-d456baa54c1fa6be2ec3711f0a72ddf7a5b2f34a6b4f515f33767d6207b7d4b3.js?body=1" for 127.0.0.1 at 2015-10-28 21:06:47 +0300
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for 127.0.0.1 at 2015-10-28 21:06:47 +0300
+
+
+Started GET "/assets/home.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2015-10-28 21:06:47 +0300
+
+
+Started GET "/assets/websitesis.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2015-10-28 21:06:47 +0300
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for 127.0.0.1 at 2015-10-28 21:06:47 +0300
+
+
+Started GET "/" for 127.0.0.1 at 2015-10-28 21:06:47 +0300
+Processing by HomeController#index as HTML
+  [1m[35mWebsitesi Load (0.2ms)[0m  SELECT "websitesis".* FROM "websitesis"
+  Rendered home/index.html.erb within layouts/application (0.0ms)
+Completed 200 OK in 27ms (Views: 25.4ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/assets/home.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2015-10-28 21:06:48 +0300
+
+
+Started GET "/assets/jquery.self-a714331225dda820228db323939889f149aec0127aeb06255646b616ba1ca419.js?body=1" for 127.0.0.1 at 2015-10-28 21:06:48 +0300
+
+
+Started GET "/assets/websitesis.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2015-10-28 21:06:48 +0300
+
+
+Started GET "/assets/scaffolds.self-75397570e7a1ff554dba3dc47300f020e17c6347615f91ff79c7737dcd1ccc2b.css?body=1" for 127.0.0.1 at 2015-10-28 21:06:48 +0300
+
+
+Started GET "/assets/jquery_ujs.self-d456baa54c1fa6be2ec3711f0a72ddf7a5b2f34a6b4f515f33767d6207b7d4b3.js?body=1" for 127.0.0.1 at 2015-10-28 21:06:48 +0300
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for 127.0.0.1 at 2015-10-28 21:06:48 +0300
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for 127.0.0.1 at 2015-10-28 21:06:48 +0300
+
+
+Started GET "/assets/home.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2015-10-28 21:06:48 +0300
+
+
+Started GET "/assets/websitesis.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2015-10-28 21:06:48 +0300
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for 127.0.0.1 at 2015-10-28 21:06:48 +0300
+
+
+Started GET "/" for 127.0.0.1 at 2015-10-28 21:06:48 +0300
+Processing by HomeController#index as HTML
+  [1m[36mWebsitesi Load (0.1ms)[0m  [1mSELECT "websitesis".* FROM "websitesis"[0m
+  Rendered home/index.html.erb within layouts/application (0.0ms)
+Completed 200 OK in 25ms (Views: 24.0ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/assets/home.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2015-10-28 21:06:48 +0300
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for 127.0.0.1 at 2015-10-28 21:06:48 +0300
+
+
+Started GET "/assets/scaffolds.self-75397570e7a1ff554dba3dc47300f020e17c6347615f91ff79c7737dcd1ccc2b.css?body=1" for 127.0.0.1 at 2015-10-28 21:06:48 +0300
+
+
+Started GET "/assets/websitesis.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2015-10-28 21:06:48 +0300
+
+
+Started GET "/assets/jquery_ujs.self-d456baa54c1fa6be2ec3711f0a72ddf7a5b2f34a6b4f515f33767d6207b7d4b3.js?body=1" for 127.0.0.1 at 2015-10-28 21:06:48 +0300
+
+
+Started GET "/assets/jquery.self-a714331225dda820228db323939889f149aec0127aeb06255646b616ba1ca419.js?body=1" for 127.0.0.1 at 2015-10-28 21:06:48 +0300
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for 127.0.0.1 at 2015-10-28 21:06:48 +0300
+
+
+Started GET "/assets/home.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2015-10-28 21:06:48 +0300
+
+
+Started GET "/assets/websitesis.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2015-10-28 21:06:48 +0300
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for 127.0.0.1 at 2015-10-28 21:06:48 +0300
+
+
+Started GET "/" for 127.0.0.1 at 2015-10-29 19:17:05 +0300
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by HomeController#index as HTML
+  [1m[35mWebsitesi Load (0.1ms)[0m  SELECT "websitesis".* FROM "websitesis"
+  Rendered home/index.html.erb within layouts/application (0.7ms)
+Completed 200 OK in 128ms (Views: 118.5ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/assets/home.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2015-10-29 19:17:06 +0300
+
+
+Started GET "/assets/scaffolds.self-75397570e7a1ff554dba3dc47300f020e17c6347615f91ff79c7737dcd1ccc2b.css?body=1" for 127.0.0.1 at 2015-10-29 19:17:06 +0300
+
+
+Started GET "/assets/websitesis.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2015-10-29 19:17:06 +0300
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for 127.0.0.1 at 2015-10-29 19:17:06 +0300
+
+
+Started GET "/assets/jquery.self-a714331225dda820228db323939889f149aec0127aeb06255646b616ba1ca419.js?body=1" for 127.0.0.1 at 2015-10-29 19:17:06 +0300
+
+
+Started GET "/assets/jquery_ujs.self-d456baa54c1fa6be2ec3711f0a72ddf7a5b2f34a6b4f515f33767d6207b7d4b3.js?body=1" for 127.0.0.1 at 2015-10-29 19:17:06 +0300
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for 127.0.0.1 at 2015-10-29 19:17:06 +0300
+
+
+Started GET "/assets/home.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2015-10-29 19:17:06 +0300
+
+
+Started GET "/assets/websitesis.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2015-10-29 19:17:06 +0300
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for 127.0.0.1 at 2015-10-29 19:17:06 +0300
+
+
+Started GET "/" for 127.0.0.1 at 2015-10-29 19:17:08 +0300
+Processing by HomeController#index as HTML
+  [1m[36mWebsitesi Load (0.1ms)[0m  [1mSELECT "websitesis".* FROM "websitesis"[0m
+  Rendered home/index.html.erb within layouts/application (0.0ms)
+Completed 200 OK in 39ms (Views: 38.4ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/assets/home.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2015-10-29 19:17:08 +0300
+
+
+Started GET "/assets/jquery.self-a714331225dda820228db323939889f149aec0127aeb06255646b616ba1ca419.js?body=1" for 127.0.0.1 at 2015-10-29 19:17:08 +0300
+
+
+Started GET "/assets/scaffolds.self-75397570e7a1ff554dba3dc47300f020e17c6347615f91ff79c7737dcd1ccc2b.css?body=1" for 127.0.0.1 at 2015-10-29 19:17:08 +0300
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for 127.0.0.1 at 2015-10-29 19:17:08 +0300
+
+
+Started GET "/assets/websitesis.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2015-10-29 19:17:08 +0300
+
+
+Started GET "/assets/jquery_ujs.self-d456baa54c1fa6be2ec3711f0a72ddf7a5b2f34a6b4f515f33767d6207b7d4b3.js?body=1" for 127.0.0.1 at 2015-10-29 19:17:08 +0300
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for 127.0.0.1 at 2015-10-29 19:17:08 +0300
+
+
+Started GET "/assets/home.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2015-10-29 19:17:08 +0300
+
+
+Started GET "/assets/websitesis.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2015-10-29 19:17:08 +0300
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for 127.0.0.1 at 2015-10-29 19:17:08 +0300
+
+
+Started GET "/" for 127.0.0.1 at 2015-10-29 19:17:09 +0300
+Processing by HomeController#index as HTML
+  [1m[35mWebsitesi Load (0.1ms)[0m  SELECT "websitesis".* FROM "websitesis"
+  Rendered home/index.html.erb within layouts/application (0.0ms)
+Completed 200 OK in 39ms (Views: 37.8ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/assets/scaffolds.self-75397570e7a1ff554dba3dc47300f020e17c6347615f91ff79c7737dcd1ccc2b.css?body=1" for 127.0.0.1 at 2015-10-29 19:17:09 +0300
+
+
+Started GET "/assets/home.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2015-10-29 19:17:09 +0300
+
+
+Started GET "/assets/jquery.self-a714331225dda820228db323939889f149aec0127aeb06255646b616ba1ca419.js?body=1" for 127.0.0.1 at 2015-10-29 19:17:09 +0300
+
+
+Started GET "/assets/websitesis.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2015-10-29 19:17:09 +0300
+
+
+Started GET "/assets/jquery_ujs.self-d456baa54c1fa6be2ec3711f0a72ddf7a5b2f34a6b4f515f33767d6207b7d4b3.js?body=1" for 127.0.0.1 at 2015-10-29 19:17:09 +0300
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for 127.0.0.1 at 2015-10-29 19:17:10 +0300
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for 127.0.0.1 at 2015-10-29 19:17:10 +0300
+
+
+Started GET "/assets/home.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2015-10-29 19:17:10 +0300
+
+
+Started GET "/assets/websitesis.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2015-10-29 19:17:10 +0300
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for 127.0.0.1 at 2015-10-29 19:17:10 +0300
+
+
+Started GET "/" for 127.0.0.1 at 2015-10-29 19:17:10 +0300
+Processing by HomeController#index as HTML
+  [1m[36mWebsitesi Load (0.1ms)[0m  [1mSELECT "websitesis".* FROM "websitesis"[0m
+  Rendered home/index.html.erb within layouts/application (0.1ms)
+Completed 200 OK in 21ms (Views: 20.2ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/assets/home.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2015-10-29 19:17:10 +0300
+
+
+Started GET "/assets/scaffolds.self-75397570e7a1ff554dba3dc47300f020e17c6347615f91ff79c7737dcd1ccc2b.css?body=1" for 127.0.0.1 at 2015-10-29 19:17:10 +0300
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for 127.0.0.1 at 2015-10-29 19:17:10 +0300
+
+
+Started GET "/assets/jquery.self-a714331225dda820228db323939889f149aec0127aeb06255646b616ba1ca419.js?body=1" for 127.0.0.1 at 2015-10-29 19:17:10 +0300
+
+
+Started GET "/assets/websitesis.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2015-10-29 19:17:10 +0300
+
+
+Started GET "/assets/jquery_ujs.self-d456baa54c1fa6be2ec3711f0a72ddf7a5b2f34a6b4f515f33767d6207b7d4b3.js?body=1" for 127.0.0.1 at 2015-10-29 19:17:10 +0300
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for 127.0.0.1 at 2015-10-29 19:17:10 +0300
+
+
+Started GET "/assets/home.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2015-10-29 19:17:10 +0300
+
+
+Started GET "/assets/websitesis.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2015-10-29 19:17:10 +0300
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for 127.0.0.1 at 2015-10-29 19:17:10 +0300
+
+
+Started GET "/" for 127.0.0.1 at 2015-10-29 19:17:11 +0300
+Processing by HomeController#index as HTML
+  [1m[35mWebsitesi Load (0.2ms)[0m  SELECT "websitesis".* FROM "websitesis"
+  Rendered home/index.html.erb within layouts/application (0.0ms)
+Completed 200 OK in 20ms (Views: 18.6ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/assets/scaffolds.self-75397570e7a1ff554dba3dc47300f020e17c6347615f91ff79c7737dcd1ccc2b.css?body=1" for 127.0.0.1 at 2015-10-29 19:17:11 +0300
+
+
+Started GET "/assets/home.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2015-10-29 19:17:11 +0300
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for 127.0.0.1 at 2015-10-29 19:17:11 +0300
+
+
+Started GET "/assets/websitesis.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2015-10-29 19:17:11 +0300
+
+
+Started GET "/assets/jquery_ujs.self-d456baa54c1fa6be2ec3711f0a72ddf7a5b2f34a6b4f515f33767d6207b7d4b3.js?body=1" for 127.0.0.1 at 2015-10-29 19:17:11 +0300
+
+
+Started GET "/assets/jquery.self-a714331225dda820228db323939889f149aec0127aeb06255646b616ba1ca419.js?body=1" for 127.0.0.1 at 2015-10-29 19:17:11 +0300
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for 127.0.0.1 at 2015-10-29 19:17:11 +0300
+
+
+Started GET "/assets/home.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2015-10-29 19:17:11 +0300
+
+
+Started GET "/assets/websitesis.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2015-10-29 19:17:11 +0300
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for 127.0.0.1 at 2015-10-29 19:17:11 +0300
+
+
+Started GET "/" for 127.0.0.1 at 2015-10-29 19:17:12 +0300
+Processing by HomeController#index as HTML
+  [1m[36mWebsitesi Load (0.1ms)[0m  [1mSELECT "websitesis".* FROM "websitesis"[0m
+  Rendered home/index.html.erb within layouts/application (0.0ms)
+Completed 200 OK in 20ms (Views: 19.4ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/assets/scaffolds.self-75397570e7a1ff554dba3dc47300f020e17c6347615f91ff79c7737dcd1ccc2b.css?body=1" for 127.0.0.1 at 2015-10-29 19:17:12 +0300
+
+
+Started GET "/assets/websitesis.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2015-10-29 19:17:12 +0300
+
+
+Started GET "/assets/home.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2015-10-29 19:17:12 +0300
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for 127.0.0.1 at 2015-10-29 19:17:12 +0300
+
+
+Started GET "/assets/jquery.self-a714331225dda820228db323939889f149aec0127aeb06255646b616ba1ca419.js?body=1" for 127.0.0.1 at 2015-10-29 19:17:12 +0300
+
+
+Started GET "/assets/jquery_ujs.self-d456baa54c1fa6be2ec3711f0a72ddf7a5b2f34a6b4f515f33767d6207b7d4b3.js?body=1" for 127.0.0.1 at 2015-10-29 19:17:12 +0300
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for 127.0.0.1 at 2015-10-29 19:17:12 +0300
+
+
+Started GET "/assets/home.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2015-10-29 19:17:12 +0300
+
+
+Started GET "/assets/websitesis.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2015-10-29 19:17:12 +0300
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for 127.0.0.1 at 2015-10-29 19:17:12 +0300
+
+
+Started GET "/" for 127.0.0.1 at 2015-10-29 19:17:12 +0300
+Processing by HomeController#index as HTML
+  [1m[35mWebsitesi Load (0.1ms)[0m  SELECT "websitesis".* FROM "websitesis"
+  Rendered home/index.html.erb within layouts/application (0.0ms)
+Completed 200 OK in 29ms (Views: 28.3ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/assets/home.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2015-10-29 19:17:12 +0300
+
+
+Started GET "/assets/websitesis.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2015-10-29 19:17:12 +0300
+
+
+Started GET "/assets/jquery.self-a714331225dda820228db323939889f149aec0127aeb06255646b616ba1ca419.js?body=1" for 127.0.0.1 at 2015-10-29 19:17:12 +0300
+
+
+Started GET "/assets/scaffolds.self-75397570e7a1ff554dba3dc47300f020e17c6347615f91ff79c7737dcd1ccc2b.css?body=1" for 127.0.0.1 at 2015-10-29 19:17:12 +0300
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for 127.0.0.1 at 2015-10-29 19:17:12 +0300
+
+
+Started GET "/assets/jquery_ujs.self-d456baa54c1fa6be2ec3711f0a72ddf7a5b2f34a6b4f515f33767d6207b7d4b3.js?body=1" for 127.0.0.1 at 2015-10-29 19:17:12 +0300
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for 127.0.0.1 at 2015-10-29 19:17:12 +0300
+
+
+Started GET "/assets/home.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2015-10-29 19:17:12 +0300
+
+
+Started GET "/assets/websitesis.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2015-10-29 19:17:12 +0300
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for 127.0.0.1 at 2015-10-29 19:17:12 +0300
+
+
+Started GET "/" for 127.0.0.1 at 2015-10-29 19:17:13 +0300
+Processing by HomeController#index as HTML
+  [1m[36mWebsitesi Load (0.1ms)[0m  [1mSELECT "websitesis".* FROM "websitesis"[0m
+  Rendered home/index.html.erb within layouts/application (0.0ms)
+Completed 200 OK in 21ms (Views: 20.5ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/assets/home.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2015-10-29 19:17:13 +0300
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for 127.0.0.1 at 2015-10-29 19:17:13 +0300
+
+
+Started GET "/assets/scaffolds.self-75397570e7a1ff554dba3dc47300f020e17c6347615f91ff79c7737dcd1ccc2b.css?body=1" for 127.0.0.1 at 2015-10-29 19:17:13 +0300
+
+
+Started GET "/assets/jquery_ujs.self-d456baa54c1fa6be2ec3711f0a72ddf7a5b2f34a6b4f515f33767d6207b7d4b3.js?body=1" for 127.0.0.1 at 2015-10-29 19:17:13 +0300
+
+
+Started GET "/assets/websitesis.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2015-10-29 19:17:13 +0300
+
+
+Started GET "/assets/jquery.self-a714331225dda820228db323939889f149aec0127aeb06255646b616ba1ca419.js?body=1" for 127.0.0.1 at 2015-10-29 19:17:13 +0300
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for 127.0.0.1 at 2015-10-29 19:17:13 +0300
+
+
+Started GET "/assets/home.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2015-10-29 19:17:13 +0300
+
+
+Started GET "/assets/websitesis.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2015-10-29 19:17:13 +0300
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for 127.0.0.1 at 2015-10-29 19:17:13 +0300
+
+
+Started GET "/" for 127.0.0.1 at 2015-10-29 19:17:13 +0300
+Processing by HomeController#index as HTML
+  [1m[35mWebsitesi Load (0.1ms)[0m  SELECT "websitesis".* FROM "websitesis"
+  Rendered home/index.html.erb within layouts/application (0.0ms)
+Completed 200 OK in 22ms (Views: 20.9ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/assets/websitesis.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2015-10-29 19:17:13 +0300
+
+
+Started GET "/assets/home.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2015-10-29 19:17:13 +0300
+
+
+Started GET "/assets/jquery.self-a714331225dda820228db323939889f149aec0127aeb06255646b616ba1ca419.js?body=1" for 127.0.0.1 at 2015-10-29 19:17:13 +0300
+
+
+Started GET "/assets/jquery_ujs.self-d456baa54c1fa6be2ec3711f0a72ddf7a5b2f34a6b4f515f33767d6207b7d4b3.js?body=1" for 127.0.0.1 at 2015-10-29 19:17:13 +0300
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for 127.0.0.1 at 2015-10-29 19:17:13 +0300
+
+
+Started GET "/assets/scaffolds.self-75397570e7a1ff554dba3dc47300f020e17c6347615f91ff79c7737dcd1ccc2b.css?body=1" for 127.0.0.1 at 2015-10-29 19:17:13 +0300
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for 127.0.0.1 at 2015-10-29 19:17:13 +0300
+
+
+Started GET "/assets/home.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2015-10-29 19:17:13 +0300
+
+
+Started GET "/assets/websitesis.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2015-10-29 19:17:13 +0300
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for 127.0.0.1 at 2015-10-29 19:17:13 +0300
+
+
+Started GET "/" for 127.0.0.1 at 2015-10-29 19:17:14 +0300
+Processing by HomeController#index as HTML
+  [1m[36mWebsitesi Load (0.1ms)[0m  [1mSELECT "websitesis".* FROM "websitesis"[0m
+  Rendered home/index.html.erb within layouts/application (0.1ms)
+Completed 200 OK in 20ms (Views: 19.0ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/assets/home.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2015-10-29 19:17:14 +0300
+
+
+Started GET "/assets/jquery_ujs.self-d456baa54c1fa6be2ec3711f0a72ddf7a5b2f34a6b4f515f33767d6207b7d4b3.js?body=1" for 127.0.0.1 at 2015-10-29 19:17:14 +0300
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for 127.0.0.1 at 2015-10-29 19:17:14 +0300
+
+
+Started GET "/assets/jquery.self-a714331225dda820228db323939889f149aec0127aeb06255646b616ba1ca419.js?body=1" for 127.0.0.1 at 2015-10-29 19:17:14 +0300
+
+
+Started GET "/assets/scaffolds.self-75397570e7a1ff554dba3dc47300f020e17c6347615f91ff79c7737dcd1ccc2b.css?body=1" for 127.0.0.1 at 2015-10-29 19:17:14 +0300
+
+
+Started GET "/assets/websitesis.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2015-10-29 19:17:14 +0300
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for 127.0.0.1 at 2015-10-29 19:17:14 +0300
+
+
+Started GET "/assets/home.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2015-10-29 19:17:14 +0300
+
+
+Started GET "/assets/websitesis.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2015-10-29 19:17:14 +0300
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for 127.0.0.1 at 2015-10-29 19:17:14 +0300
+
+
+Started GET "/" for 127.0.0.1 at 2015-10-29 19:17:14 +0300
+Processing by HomeController#index as HTML
+  [1m[35mWebsitesi Load (0.1ms)[0m  SELECT "websitesis".* FROM "websitesis"
+  Rendered home/index.html.erb within layouts/application (0.0ms)
+Completed 200 OK in 24ms (Views: 23.4ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/assets/home.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2015-10-29 19:17:14 +0300
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for 127.0.0.1 at 2015-10-29 19:17:14 +0300
+
+
+Started GET "/assets/scaffolds.self-75397570e7a1ff554dba3dc47300f020e17c6347615f91ff79c7737dcd1ccc2b.css?body=1" for 127.0.0.1 at 2015-10-29 19:17:14 +0300
+
+
+Started GET "/assets/jquery_ujs.self-d456baa54c1fa6be2ec3711f0a72ddf7a5b2f34a6b4f515f33767d6207b7d4b3.js?body=1" for 127.0.0.1 at 2015-10-29 19:17:14 +0300
+
+
+Started GET "/assets/websitesis.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2015-10-29 19:17:14 +0300
+
+
+Started GET "/assets/jquery.self-a714331225dda820228db323939889f149aec0127aeb06255646b616ba1ca419.js?body=1" for 127.0.0.1 at 2015-10-29 19:17:14 +0300
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for 127.0.0.1 at 2015-10-29 19:17:14 +0300
+
+
+Started GET "/assets/home.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2015-10-29 19:17:14 +0300
+
+
+Started GET "/assets/websitesis.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2015-10-29 19:17:14 +0300
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for 127.0.0.1 at 2015-10-29 19:17:14 +0300
+
+
+Started GET "/" for 127.0.0.1 at 2015-10-29 19:17:15 +0300
+Processing by HomeController#index as HTML
+  [1m[36mWebsitesi Load (0.1ms)[0m  [1mSELECT "websitesis".* FROM "websitesis"[0m
+  Rendered home/index.html.erb within layouts/application (0.0ms)
+Completed 200 OK in 21ms (Views: 20.2ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/assets/home.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2015-10-29 19:17:15 +0300
+
+
+Started GET "/assets/scaffolds.self-75397570e7a1ff554dba3dc47300f020e17c6347615f91ff79c7737dcd1ccc2b.css?body=1" for 127.0.0.1 at 2015-10-29 19:17:15 +0300
+
+
+Started GET "/assets/websitesis.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2015-10-29 19:17:15 +0300
+
+
+Started GET "/assets/jquery.self-a714331225dda820228db323939889f149aec0127aeb06255646b616ba1ca419.js?body=1" for 127.0.0.1 at 2015-10-29 19:17:15 +0300
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for 127.0.0.1 at 2015-10-29 19:17:15 +0300
+
+
+Started GET "/assets/jquery_ujs.self-d456baa54c1fa6be2ec3711f0a72ddf7a5b2f34a6b4f515f33767d6207b7d4b3.js?body=1" for 127.0.0.1 at 2015-10-29 19:17:15 +0300
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for 127.0.0.1 at 2015-10-29 19:17:15 +0300
+
+
+Started GET "/assets/home.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2015-10-29 19:17:15 +0300
+
+
+Started GET "/assets/websitesis.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2015-10-29 19:17:15 +0300
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for 127.0.0.1 at 2015-10-29 19:17:15 +0300
+
+
+Started GET "/" for 127.0.0.1 at 2015-10-29 19:17:15 +0300
+Processing by HomeController#index as HTML
+  [1m[35mWebsitesi Load (0.2ms)[0m  SELECT "websitesis".* FROM "websitesis"
+  Rendered home/index.html.erb within layouts/application (0.0ms)
+Completed 200 OK in 22ms (Views: 21.1ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/assets/home.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2015-10-29 19:17:15 +0300
+
+
+Started GET "/assets/scaffolds.self-75397570e7a1ff554dba3dc47300f020e17c6347615f91ff79c7737dcd1ccc2b.css?body=1" for 127.0.0.1 at 2015-10-29 19:17:15 +0300
+
+
+Started GET "/assets/jquery.self-a714331225dda820228db323939889f149aec0127aeb06255646b616ba1ca419.js?body=1" for 127.0.0.1 at 2015-10-29 19:17:15 +0300
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for 127.0.0.1 at 2015-10-29 19:17:15 +0300
+
+
+Started GET "/assets/jquery_ujs.self-d456baa54c1fa6be2ec3711f0a72ddf7a5b2f34a6b4f515f33767d6207b7d4b3.js?body=1" for 127.0.0.1 at 2015-10-29 19:17:15 +0300
+
+
+Started GET "/assets/websitesis.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2015-10-29 19:17:15 +0300
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for 127.0.0.1 at 2015-10-29 19:17:15 +0300
+
+
+Started GET "/assets/home.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2015-10-29 19:17:15 +0300
+
+
+Started GET "/assets/websitesis.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2015-10-29 19:17:15 +0300
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for 127.0.0.1 at 2015-10-29 19:17:15 +0300
+
+
+Started GET "/" for 127.0.0.1 at 2015-10-29 19:17:16 +0300
+Processing by HomeController#index as HTML
+  [1m[36mWebsitesi Load (0.2ms)[0m  [1mSELECT "websitesis".* FROM "websitesis"[0m
+  Rendered home/index.html.erb within layouts/application (0.1ms)
+Completed 200 OK in 24ms (Views: 22.5ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/assets/home.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2015-10-29 19:17:16 +0300
+
+
+Started GET "/assets/jquery.self-a714331225dda820228db323939889f149aec0127aeb06255646b616ba1ca419.js?body=1" for 127.0.0.1 at 2015-10-29 19:17:16 +0300
+
+
+Started GET "/assets/scaffolds.self-75397570e7a1ff554dba3dc47300f020e17c6347615f91ff79c7737dcd1ccc2b.css?body=1" for 127.0.0.1 at 2015-10-29 19:17:16 +0300
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for 127.0.0.1 at 2015-10-29 19:17:16 +0300
+
+
+Started GET "/assets/websitesis.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2015-10-29 19:17:16 +0300
+
+
+Started GET "/assets/jquery_ujs.self-d456baa54c1fa6be2ec3711f0a72ddf7a5b2f34a6b4f515f33767d6207b7d4b3.js?body=1" for 127.0.0.1 at 2015-10-29 19:17:16 +0300
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for 127.0.0.1 at 2015-10-29 19:17:16 +0300
+
+
+Started GET "/assets/home.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2015-10-29 19:17:16 +0300
+
+
+Started GET "/assets/websitesis.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2015-10-29 19:17:16 +0300
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for 127.0.0.1 at 2015-10-29 19:17:16 +0300
+
+
+Started GET "/" for 127.0.0.1 at 2015-10-29 19:17:16 +0300
+Processing by HomeController#index as HTML
+  [1m[35mWebsitesi Load (0.1ms)[0m  SELECT "websitesis".* FROM "websitesis"
+  Rendered home/index.html.erb within layouts/application (0.0ms)
+Completed 200 OK in 22ms (Views: 20.7ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/assets/home.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2015-10-29 19:17:16 +0300
+
+
+Started GET "/assets/scaffolds.self-75397570e7a1ff554dba3dc47300f020e17c6347615f91ff79c7737dcd1ccc2b.css?body=1" for 127.0.0.1 at 2015-10-29 19:17:16 +0300
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for 127.0.0.1 at 2015-10-29 19:17:16 +0300
+
+
+Started GET "/assets/websitesis.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2015-10-29 19:17:16 +0300
+
+
+Started GET "/assets/jquery.self-a714331225dda820228db323939889f149aec0127aeb06255646b616ba1ca419.js?body=1" for 127.0.0.1 at 2015-10-29 19:17:16 +0300
+
+
+Started GET "/assets/home.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2015-10-29 19:17:16 +0300
+
+
+Started GET "/assets/jquery_ujs.self-d456baa54c1fa6be2ec3711f0a72ddf7a5b2f34a6b4f515f33767d6207b7d4b3.js?body=1" for 127.0.0.1 at 2015-10-29 19:17:16 +0300
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for 127.0.0.1 at 2015-10-29 19:17:16 +0300
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for 127.0.0.1 at 2015-10-29 19:17:16 +0300
+
+
+Started GET "/assets/websitesis.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2015-10-29 19:17:16 +0300
+
+
+Started GET "/" for 127.0.0.1 at 2015-10-29 19:17:16 +0300
+Processing by HomeController#index as HTML
+  [1m[36mWebsitesi Load (0.1ms)[0m  [1mSELECT "websitesis".* FROM "websitesis"[0m
+  Rendered home/index.html.erb within layouts/application (0.0ms)
+Completed 200 OK in 21ms (Views: 20.5ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/assets/home.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2015-10-29 19:17:16 +0300
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for 127.0.0.1 at 2015-10-29 19:17:16 +0300
+
+
+Started GET "/assets/websitesis.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2015-10-29 19:17:16 +0300
+
+
+Started GET "/assets/scaffolds.self-75397570e7a1ff554dba3dc47300f020e17c6347615f91ff79c7737dcd1ccc2b.css?body=1" for 127.0.0.1 at 2015-10-29 19:17:16 +0300
+
+
+Started GET "/assets/jquery.self-a714331225dda820228db323939889f149aec0127aeb06255646b616ba1ca419.js?body=1" for 127.0.0.1 at 2015-10-29 19:17:16 +0300
+
+
+Started GET "/assets/jquery_ujs.self-d456baa54c1fa6be2ec3711f0a72ddf7a5b2f34a6b4f515f33767d6207b7d4b3.js?body=1" for 127.0.0.1 at 2015-10-29 19:17:16 +0300
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for 127.0.0.1 at 2015-10-29 19:17:16 +0300
+
+
+Started GET "/assets/websitesis.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2015-10-29 19:17:16 +0300
+
+
+Started GET "/assets/home.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2015-10-29 19:17:16 +0300
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for 127.0.0.1 at 2015-10-29 19:17:16 +0300
+
+
+Started GET "/" for 127.0.0.1 at 2015-10-29 19:17:16 +0300
+Processing by HomeController#index as HTML
+  [1m[35mWebsitesi Load (0.1ms)[0m  SELECT "websitesis".* FROM "websitesis"
+  Rendered home/index.html.erb within layouts/application (0.0ms)
+Completed 200 OK in 21ms (Views: 20.5ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/assets/home.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2015-10-29 19:17:16 +0300
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for 127.0.0.1 at 2015-10-29 19:17:16 +0300
+
+
+Started GET "/assets/websitesis.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2015-10-29 19:17:16 +0300
+
+
+Started GET "/assets/scaffolds.self-75397570e7a1ff554dba3dc47300f020e17c6347615f91ff79c7737dcd1ccc2b.css?body=1" for 127.0.0.1 at 2015-10-29 19:17:16 +0300
+
+
+Started GET "/assets/jquery.self-a714331225dda820228db323939889f149aec0127aeb06255646b616ba1ca419.js?body=1" for 127.0.0.1 at 2015-10-29 19:17:16 +0300
+
+
+Started GET "/assets/jquery_ujs.self-d456baa54c1fa6be2ec3711f0a72ddf7a5b2f34a6b4f515f33767d6207b7d4b3.js?body=1" for 127.0.0.1 at 2015-10-29 19:17:16 +0300
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for 127.0.0.1 at 2015-10-29 19:17:16 +0300
+
+
+Started GET "/assets/home.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2015-10-29 19:17:16 +0300
+
+
+Started GET "/assets/websitesis.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2015-10-29 19:17:16 +0300
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for 127.0.0.1 at 2015-10-29 19:17:16 +0300
+
+
+Started GET "/" for 127.0.0.1 at 2015-10-29 19:17:16 +0300
+Processing by HomeController#index as HTML
+  [1m[36mWebsitesi Load (0.1ms)[0m  [1mSELECT "websitesis".* FROM "websitesis"[0m
+  Rendered home/index.html.erb within layouts/application (0.0ms)
+Completed 200 OK in 25ms (Views: 24.4ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/assets/home.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2015-10-29 19:17:16 +0300
+
+
+Started GET "/assets/jquery_ujs.self-d456baa54c1fa6be2ec3711f0a72ddf7a5b2f34a6b4f515f33767d6207b7d4b3.js?body=1" for 127.0.0.1 at 2015-10-29 19:17:16 +0300
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for 127.0.0.1 at 2015-10-29 19:17:16 +0300
+
+
+Started GET "/assets/websitesis.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2015-10-29 19:17:16 +0300
+
+
+Started GET "/assets/jquery.self-a714331225dda820228db323939889f149aec0127aeb06255646b616ba1ca419.js?body=1" for 127.0.0.1 at 2015-10-29 19:17:16 +0300
+
+
+Started GET "/assets/scaffolds.self-75397570e7a1ff554dba3dc47300f020e17c6347615f91ff79c7737dcd1ccc2b.css?body=1" for 127.0.0.1 at 2015-10-29 19:17:16 +0300
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for 127.0.0.1 at 2015-10-29 19:17:16 +0300
+
+
+Started GET "/assets/home.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2015-10-29 19:17:16 +0300
+
+
+Started GET "/assets/websitesis.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2015-10-29 19:17:16 +0300
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for 127.0.0.1 at 2015-10-29 19:17:16 +0300
+
+
+Started GET "/" for 127.0.0.1 at 2015-10-29 19:17:17 +0300
+Processing by HomeController#index as HTML
+  [1m[35mWebsitesi Load (0.2ms)[0m  SELECT "websitesis".* FROM "websitesis"
+  Rendered home/index.html.erb within layouts/application (0.0ms)
+Completed 200 OK in 23ms (Views: 21.8ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/" for 127.0.0.1 at 2015-10-29 19:17:17 +0300
+Processing by HomeController#index as HTML
+  [1m[36mWebsitesi Load (0.2ms)[0m  [1mSELECT "websitesis".* FROM "websitesis"[0m
+  Rendered home/index.html.erb within layouts/application (0.0ms)
+Completed 200 OK in 32ms (Views: 31.2ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/" for 127.0.0.1 at 2015-10-29 19:17:17 +0300
+Processing by HomeController#index as HTML
+  [1m[35mWebsitesi Load (0.1ms)[0m  SELECT "websitesis".* FROM "websitesis"
+  Rendered home/index.html.erb within layouts/application (0.1ms)
+Completed 200 OK in 23ms (Views: 21.9ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/" for 127.0.0.1 at 2015-10-29 19:17:17 +0300
+Processing by HomeController#index as HTML
+  [1m[36mWebsitesi Load (0.1ms)[0m  [1mSELECT "websitesis".* FROM "websitesis"[0m
+  Rendered home/index.html.erb within layouts/application (0.0ms)
+Completed 200 OK in 25ms (Views: 23.9ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/" for 127.0.0.1 at 2015-10-29 19:17:17 +0300
+Processing by HomeController#index as HTML
+  [1m[35mWebsitesi Load (0.1ms)[0m  SELECT "websitesis".* FROM "websitesis"
+  Rendered home/index.html.erb within layouts/application (0.0ms)
+Completed 200 OK in 20ms (Views: 19.6ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/" for 127.0.0.1 at 2015-10-29 19:17:17 +0300
+Processing by HomeController#index as HTML
+  [1m[36mWebsitesi Load (0.1ms)[0m  [1mSELECT "websitesis".* FROM "websitesis"[0m
+  Rendered home/index.html.erb within layouts/application (0.0ms)
+Completed 200 OK in 27ms (Views: 26.0ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/" for 127.0.0.1 at 2015-10-29 19:17:17 +0300
+Processing by HomeController#index as HTML
+  [1m[35mWebsitesi Load (0.1ms)[0m  SELECT "websitesis".* FROM "websitesis"
+  Rendered home/index.html.erb within layouts/application (0.0ms)
+Completed 200 OK in 21ms (Views: 20.5ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/" for 127.0.0.1 at 2015-10-29 19:17:17 +0300
+Processing by HomeController#index as HTML
+  [1m[36mWebsitesi Load (0.1ms)[0m  [1mSELECT "websitesis".* FROM "websitesis"[0m
+  Rendered home/index.html.erb within layouts/application (0.0ms)
+Completed 200 OK in 21ms (Views: 20.2ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/assets/home.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2015-10-29 19:17:17 +0300
+
+
+Started GET "/assets/scaffolds.self-75397570e7a1ff554dba3dc47300f020e17c6347615f91ff79c7737dcd1ccc2b.css?body=1" for 127.0.0.1 at 2015-10-29 19:17:17 +0300
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for 127.0.0.1 at 2015-10-29 19:17:17 +0300
+
+
+Started GET "/assets/websitesis.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2015-10-29 19:17:17 +0300
+
+
+Started GET "/assets/jquery.self-a714331225dda820228db323939889f149aec0127aeb06255646b616ba1ca419.js?body=1" for 127.0.0.1 at 2015-10-29 19:17:17 +0300
+
+
+Started GET "/assets/jquery_ujs.self-d456baa54c1fa6be2ec3711f0a72ddf7a5b2f34a6b4f515f33767d6207b7d4b3.js?body=1" for 127.0.0.1 at 2015-10-29 19:17:17 +0300
+
+
+Started GET "/assets/websitesis.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2015-10-29 19:17:17 +0300
+
+
+Started GET "/" for 127.0.0.1 at 2015-10-29 19:17:17 +0300
+Processing by HomeController#index as HTML
+  [1m[35mWebsitesi Load (0.1ms)[0m  SELECT "websitesis".* FROM "websitesis"
+  Rendered home/index.html.erb within layouts/application (0.0ms)
+Completed 200 OK in 23ms (Views: 22.1ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/" for 127.0.0.1 at 2015-10-29 19:17:17 +0300
+Processing by HomeController#index as HTML
+  [1m[36mWebsitesi Load (0.1ms)[0m  [1mSELECT "websitesis".* FROM "websitesis"[0m
+  Rendered home/index.html.erb within layouts/application (0.0ms)
+Completed 200 OK in 21ms (Views: 20.2ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/" for 127.0.0.1 at 2015-10-29 19:17:17 +0300
+Processing by HomeController#index as HTML
+  [1m[35mWebsitesi Load (0.1ms)[0m  SELECT "websitesis".* FROM "websitesis"
+  Rendered home/index.html.erb within layouts/application (0.1ms)
+Completed 200 OK in 25ms (Views: 24.1ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/" for 127.0.0.1 at 2015-10-29 19:17:17 +0300
+Processing by HomeController#index as HTML
+  [1m[36mWebsitesi Load (0.1ms)[0m  [1mSELECT "websitesis".* FROM "websitesis"[0m
+  Rendered home/index.html.erb within layouts/application (0.0ms)
+Completed 200 OK in 22ms (Views: 21.2ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/" for 127.0.0.1 at 2015-10-29 19:17:17 +0300
+Processing by HomeController#index as HTML
+  [1m[35mWebsitesi Load (0.1ms)[0m  SELECT "websitesis".* FROM "websitesis"
+  Rendered home/index.html.erb within layouts/application (0.0ms)
+Completed 200 OK in 31ms (Views: 29.8ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/" for 127.0.0.1 at 2015-10-29 19:17:17 +0300
+Processing by HomeController#index as HTML
+  [1m[36mWebsitesi Load (0.1ms)[0m  [1mSELECT "websitesis".* FROM "websitesis"[0m
+  Rendered home/index.html.erb within layouts/application (0.0ms)
+Completed 200 OK in 26ms (Views: 24.7ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/" for 127.0.0.1 at 2015-10-29 19:17:17 +0300
+Processing by HomeController#index as HTML
+  [1m[35mWebsitesi Load (0.1ms)[0m  SELECT "websitesis".* FROM "websitesis"
+  Rendered home/index.html.erb within layouts/application (0.0ms)
+Completed 200 OK in 22ms (Views: 21.1ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/" for 127.0.0.1 at 2015-10-29 19:17:17 +0300
+Processing by HomeController#index as HTML
+  [1m[36mWebsitesi Load (0.1ms)[0m  [1mSELECT "websitesis".* FROM "websitesis"[0m
+  Rendered home/index.html.erb within layouts/application (0.0ms)
+Completed 200 OK in 22ms (Views: 21.4ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/" for 127.0.0.1 at 2015-10-29 19:17:17 +0300
+Processing by HomeController#index as HTML
+  [1m[35mWebsitesi Load (0.1ms)[0m  SELECT "websitesis".* FROM "websitesis"
+  Rendered home/index.html.erb within layouts/application (0.0ms)
+Completed 200 OK in 28ms (Views: 26.6ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/" for 127.0.0.1 at 2015-10-29 19:17:17 +0300
+Processing by HomeController#index as HTML
+  [1m[36mWebsitesi Load (0.1ms)[0m  [1mSELECT "websitesis".* FROM "websitesis"[0m
+  Rendered home/index.html.erb within layouts/application (0.0ms)
+Completed 200 OK in 35ms (Views: 33.7ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/" for 127.0.0.1 at 2015-10-29 19:17:17 +0300
+Processing by HomeController#index as HTML
+  [1m[35mWebsitesi Load (0.1ms)[0m  SELECT "websitesis".* FROM "websitesis"
+  Rendered home/index.html.erb within layouts/application (0.0ms)
+Completed 200 OK in 20ms (Views: 19.2ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/" for 127.0.0.1 at 2015-10-29 19:17:17 +0300
+Processing by HomeController#index as HTML
+  [1m[36mWebsitesi Load (0.1ms)[0m  [1mSELECT "websitesis".* FROM "websitesis"[0m
+  Rendered home/index.html.erb within layouts/application (0.0ms)
+Completed 200 OK in 23ms (Views: 22.6ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/" for 127.0.0.1 at 2015-10-29 19:17:17 +0300
+Processing by HomeController#index as HTML
+  [1m[35mWebsitesi Load (0.1ms)[0m  SELECT "websitesis".* FROM "websitesis"
+  Rendered home/index.html.erb within layouts/application (0.0ms)
+Completed 200 OK in 24ms (Views: 22.8ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/" for 127.0.0.1 at 2015-10-29 19:17:17 +0300
+Processing by HomeController#index as HTML
+  [1m[36mWebsitesi Load (0.1ms)[0m  [1mSELECT "websitesis".* FROM "websitesis"[0m
+  Rendered home/index.html.erb within layouts/application (0.0ms)
+Completed 200 OK in 22ms (Views: 21.4ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/" for 127.0.0.1 at 2015-10-29 19:17:17 +0300
+Processing by HomeController#index as HTML
+  [1m[35mWebsitesi Load (0.1ms)[0m  SELECT "websitesis".* FROM "websitesis"
+  Rendered home/index.html.erb within layouts/application (0.0ms)
+Completed 200 OK in 22ms (Views: 21.1ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/" for 127.0.0.1 at 2015-10-29 19:17:18 +0300
+Processing by HomeController#index as HTML
+  [1m[36mWebsitesi Load (0.2ms)[0m  [1mSELECT "websitesis".* FROM "websitesis"[0m
+  Rendered home/index.html.erb within layouts/application (0.0ms)
+Completed 200 OK in 21ms (Views: 20.3ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/" for 127.0.0.1 at 2015-10-29 19:17:18 +0300
+Processing by HomeController#index as HTML
+  [1m[35mWebsitesi Load (0.2ms)[0m  SELECT "websitesis".* FROM "websitesis"
+  Rendered home/index.html.erb within layouts/application (0.1ms)
+Completed 200 OK in 26ms (Views: 24.7ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/" for 127.0.0.1 at 2015-10-29 19:17:18 +0300
+Processing by HomeController#index as HTML
+  [1m[36mWebsitesi Load (0.2ms)[0m  [1mSELECT "websitesis".* FROM "websitesis"[0m
+  Rendered home/index.html.erb within layouts/application (0.0ms)
+Completed 200 OK in 27ms (Views: 25.7ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/" for 127.0.0.1 at 2015-10-29 19:17:18 +0300
+Processing by HomeController#index as HTML
+  [1m[35mWebsitesi Load (0.1ms)[0m  SELECT "websitesis".* FROM "websitesis"
+  Rendered home/index.html.erb within layouts/application (0.0ms)
+Completed 200 OK in 22ms (Views: 21.0ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/" for 127.0.0.1 at 2015-10-29 19:17:18 +0300
+Processing by HomeController#index as HTML
+  [1m[36mWebsitesi Load (0.1ms)[0m  [1mSELECT "websitesis".* FROM "websitesis"[0m
+  Rendered home/index.html.erb within layouts/application (0.1ms)
+Completed 200 OK in 22ms (Views: 20.6ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/assets/home.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2015-10-29 19:17:18 +0300
+
+
+Started GET "/assets/scaffolds.self-75397570e7a1ff554dba3dc47300f020e17c6347615f91ff79c7737dcd1ccc2b.css?body=1" for 127.0.0.1 at 2015-10-29 19:17:18 +0300
+
+
+Started GET "/assets/websitesis.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2015-10-29 19:17:18 +0300
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for 127.0.0.1 at 2015-10-29 19:17:18 +0300
+
+
+Started GET "/assets/jquery.self-a714331225dda820228db323939889f149aec0127aeb06255646b616ba1ca419.js?body=1" for 127.0.0.1 at 2015-10-29 19:17:18 +0300
+
+
+Started GET "/assets/jquery_ujs.self-d456baa54c1fa6be2ec3711f0a72ddf7a5b2f34a6b4f515f33767d6207b7d4b3.js?body=1" for 127.0.0.1 at 2015-10-29 19:17:18 +0300
+
+
+Started GET "/" for 127.0.0.1 at 2015-10-29 19:17:18 +0300
+Processing by HomeController#index as HTML
+  [1m[35mWebsitesi Load (0.2ms)[0m  SELECT "websitesis".* FROM "websitesis"
+  Rendered home/index.html.erb within layouts/application (0.0ms)
+Completed 200 OK in 24ms (Views: 22.7ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/" for 127.0.0.1 at 2015-10-29 19:17:18 +0300
+Processing by HomeController#index as HTML
+  [1m[36mWebsitesi Load (0.1ms)[0m  [1mSELECT "websitesis".* FROM "websitesis"[0m
+  Rendered home/index.html.erb within layouts/application (0.0ms)
+Completed 200 OK in 20ms (Views: 19.3ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/" for 127.0.0.1 at 2015-10-29 19:17:18 +0300
+Processing by HomeController#index as HTML
+  [1m[35mWebsitesi Load (0.1ms)[0m  SELECT "websitesis".* FROM "websitesis"
+  Rendered home/index.html.erb within layouts/application (0.0ms)
+Completed 200 OK in 25ms (Views: 24.3ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/" for 127.0.0.1 at 2015-10-29 19:17:18 +0300
+Processing by HomeController#index as HTML
+  [1m[36mWebsitesi Load (0.1ms)[0m  [1mSELECT "websitesis".* FROM "websitesis"[0m
+  Rendered home/index.html.erb within layouts/application (0.1ms)
+Completed 200 OK in 28ms (Views: 27.0ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/" for 127.0.0.1 at 2015-10-29 19:17:18 +0300
+Processing by HomeController#index as HTML
+  [1m[35mWebsitesi Load (0.1ms)[0m  SELECT "websitesis".* FROM "websitesis"
+  Rendered home/index.html.erb within layouts/application (0.0ms)
+Completed 200 OK in 31ms (Views: 30.3ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/" for 127.0.0.1 at 2015-10-29 19:17:18 +0300
+Processing by HomeController#index as HTML
+  [1m[36mWebsitesi Load (0.1ms)[0m  [1mSELECT "websitesis".* FROM "websitesis"[0m
+  Rendered home/index.html.erb within layouts/application (0.0ms)
+Completed 200 OK in 20ms (Views: 19.5ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/assets/home.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2015-10-29 19:17:18 +0300
+
+
+Started GET "/assets/scaffolds.self-75397570e7a1ff554dba3dc47300f020e17c6347615f91ff79c7737dcd1ccc2b.css?body=1" for 127.0.0.1 at 2015-10-29 19:17:18 +0300
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for 127.0.0.1 at 2015-10-29 19:17:18 +0300
+
+
+Started GET "/assets/websitesis.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2015-10-29 19:17:18 +0300
+
+
+Started GET "/assets/home.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2015-10-29 19:17:18 +0300
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for 127.0.0.1 at 2015-10-29 19:17:18 +0300
+
+
+Started GET "/assets/jquery.self-a714331225dda820228db323939889f149aec0127aeb06255646b616ba1ca419.js?body=1" for 127.0.0.1 at 2015-10-29 19:17:18 +0300
+
+
+Started GET "/assets/jquery_ujs.self-d456baa54c1fa6be2ec3711f0a72ddf7a5b2f34a6b4f515f33767d6207b7d4b3.js?body=1" for 127.0.0.1 at 2015-10-29 19:17:18 +0300
+
+
+Started GET "/assets/websitesis.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2015-10-29 19:17:18 +0300
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for 127.0.0.1 at 2015-10-29 19:17:18 +0300
+
+
+Started GET "/" for 127.0.0.1 at 2015-10-29 19:17:18 +0300
+Processing by HomeController#index as HTML
+  [1m[35mWebsitesi Load (0.2ms)[0m  SELECT "websitesis".* FROM "websitesis"
+  Rendered home/index.html.erb within layouts/application (0.2ms)
+Completed 200 OK in 22ms (Views: 20.7ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/assets/home.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2015-10-29 19:17:18 +0300
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for 127.0.0.1 at 2015-10-29 19:17:18 +0300
+
+
+Started GET "/assets/websitesis.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2015-10-29 19:17:18 +0300
+
+
+Started GET "/assets/scaffolds.self-75397570e7a1ff554dba3dc47300f020e17c6347615f91ff79c7737dcd1ccc2b.css?body=1" for 127.0.0.1 at 2015-10-29 19:17:18 +0300
+
+
+Started GET "/assets/jquery.self-a714331225dda820228db323939889f149aec0127aeb06255646b616ba1ca419.js?body=1" for 127.0.0.1 at 2015-10-29 19:17:18 +0300
+
+
+Started GET "/assets/jquery_ujs.self-d456baa54c1fa6be2ec3711f0a72ddf7a5b2f34a6b4f515f33767d6207b7d4b3.js?body=1" for 127.0.0.1 at 2015-10-29 19:17:18 +0300
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for 127.0.0.1 at 2015-10-29 19:17:18 +0300
+
+
+Started GET "/assets/home.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2015-10-29 19:17:18 +0300
+
+
+Started GET "/assets/websitesis.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2015-10-29 19:17:18 +0300
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for 127.0.0.1 at 2015-10-29 19:17:18 +0300
+
+
+Started GET "/" for 127.0.0.1 at 2015-10-29 19:17:19 +0300
+Processing by HomeController#index as HTML
+  [1m[36mWebsitesi Load (0.1ms)[0m  [1mSELECT "websitesis".* FROM "websitesis"[0m
+  Rendered home/index.html.erb within layouts/application (0.0ms)
+Completed 200 OK in 20ms (Views: 19.5ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/assets/scaffolds.self-75397570e7a1ff554dba3dc47300f020e17c6347615f91ff79c7737dcd1ccc2b.css?body=1" for 127.0.0.1 at 2015-10-29 19:17:19 +0300
+
+
+Started GET "/assets/home.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2015-10-29 19:17:19 +0300
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for 127.0.0.1 at 2015-10-29 19:17:19 +0300
+
+
+Started GET "/assets/jquery_ujs.self-d456baa54c1fa6be2ec3711f0a72ddf7a5b2f34a6b4f515f33767d6207b7d4b3.js?body=1" for 127.0.0.1 at 2015-10-29 19:17:19 +0300
+
+
+Started GET "/assets/websitesis.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2015-10-29 19:17:19 +0300
+
+
+Started GET "/assets/jquery.self-a714331225dda820228db323939889f149aec0127aeb06255646b616ba1ca419.js?body=1" for 127.0.0.1 at 2015-10-29 19:17:19 +0300
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for 127.0.0.1 at 2015-10-29 19:17:19 +0300
+
+
+Started GET "/assets/home.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2015-10-29 19:17:19 +0300
+
+
+Started GET "/assets/websitesis.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2015-10-29 19:17:19 +0300
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for 127.0.0.1 at 2015-10-29 19:17:19 +0300
+
+
+Started GET "/" for 127.0.0.1 at 2015-10-29 19:17:19 +0300
+Processing by HomeController#index as HTML
+  [1m[35mWebsitesi Load (0.1ms)[0m  SELECT "websitesis".* FROM "websitesis"
+  Rendered home/index.html.erb within layouts/application (0.0ms)
+Completed 200 OK in 27ms (Views: 26.3ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/assets/scaffolds.self-75397570e7a1ff554dba3dc47300f020e17c6347615f91ff79c7737dcd1ccc2b.css?body=1" for 127.0.0.1 at 2015-10-29 19:17:19 +0300
+
+
+Started GET "/assets/home.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2015-10-29 19:17:19 +0300
+
+
+Started GET "/assets/websitesis.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2015-10-29 19:17:19 +0300
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for 127.0.0.1 at 2015-10-29 19:17:19 +0300
+
+
+Started GET "/assets/jquery.self-a714331225dda820228db323939889f149aec0127aeb06255646b616ba1ca419.js?body=1" for 127.0.0.1 at 2015-10-29 19:17:19 +0300
+
+
+Started GET "/assets/jquery_ujs.self-d456baa54c1fa6be2ec3711f0a72ddf7a5b2f34a6b4f515f33767d6207b7d4b3.js?body=1" for 127.0.0.1 at 2015-10-29 19:17:19 +0300
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for 127.0.0.1 at 2015-10-29 19:17:19 +0300
+
+
+Started GET "/assets/home.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2015-10-29 19:17:19 +0300
+
+
+Started GET "/assets/websitesis.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2015-10-29 19:17:19 +0300
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for 127.0.0.1 at 2015-10-29 19:17:19 +0300
+
+
+Started GET "/" for 127.0.0.1 at 2015-10-29 19:17:19 +0300
+Processing by HomeController#index as HTML
+  [1m[36mWebsitesi Load (0.1ms)[0m  [1mSELECT "websitesis".* FROM "websitesis"[0m
+  Rendered home/index.html.erb within layouts/application (0.0ms)
+Completed 200 OK in 19ms (Views: 18.3ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/assets/home.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2015-10-29 19:17:19 +0300
+
+
+Started GET "/assets/scaffolds.self-75397570e7a1ff554dba3dc47300f020e17c6347615f91ff79c7737dcd1ccc2b.css?body=1" for 127.0.0.1 at 2015-10-29 19:17:19 +0300
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for 127.0.0.1 at 2015-10-29 19:17:19 +0300
+
+
+Started GET "/assets/jquery_ujs.self-d456baa54c1fa6be2ec3711f0a72ddf7a5b2f34a6b4f515f33767d6207b7d4b3.js?body=1" for 127.0.0.1 at 2015-10-29 19:17:19 +0300
+
+
+Started GET "/assets/jquery.self-a714331225dda820228db323939889f149aec0127aeb06255646b616ba1ca419.js?body=1" for 127.0.0.1 at 2015-10-29 19:17:19 +0300
+
+
+Started GET "/assets/websitesis.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2015-10-29 19:17:19 +0300
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for 127.0.0.1 at 2015-10-29 19:17:19 +0300
+
+
+Started GET "/assets/home.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2015-10-29 19:17:19 +0300
+
+
+Started GET "/assets/websitesis.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2015-10-29 19:17:19 +0300
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for 127.0.0.1 at 2015-10-29 19:17:19 +0300
+
+
+Started GET "/" for 127.0.0.1 at 2015-10-29 19:17:19 +0300
+Processing by HomeController#index as HTML
+  [1m[35mWebsitesi Load (0.1ms)[0m  SELECT "websitesis".* FROM "websitesis"
+  Rendered home/index.html.erb within layouts/application (0.0ms)
+Completed 200 OK in 20ms (Views: 19.6ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/assets/home.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2015-10-29 19:17:19 +0300
+
+
+Started GET "/assets/scaffolds.self-75397570e7a1ff554dba3dc47300f020e17c6347615f91ff79c7737dcd1ccc2b.css?body=1" for 127.0.0.1 at 2015-10-29 19:17:19 +0300
+
+
+Started GET "/assets/websitesis.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2015-10-29 19:17:19 +0300
+
+
+Started GET "/assets/jquery.self-a714331225dda820228db323939889f149aec0127aeb06255646b616ba1ca419.js?body=1" for 127.0.0.1 at 2015-10-29 19:17:19 +0300
+
+
+Started GET "/assets/jquery_ujs.self-d456baa54c1fa6be2ec3711f0a72ddf7a5b2f34a6b4f515f33767d6207b7d4b3.js?body=1" for 127.0.0.1 at 2015-10-29 19:17:19 +0300
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for 127.0.0.1 at 2015-10-29 19:17:19 +0300
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for 127.0.0.1 at 2015-10-29 19:17:19 +0300
+
+
+Started GET "/assets/home.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2015-10-29 19:17:19 +0300
+
+
+Started GET "/assets/websitesis.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2015-10-29 19:17:19 +0300
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for 127.0.0.1 at 2015-10-29 19:17:19 +0300
+
+
+Started GET "/" for 127.0.0.1 at 2015-10-29 19:17:19 +0300
+Processing by HomeController#index as HTML
+  [1m[36mWebsitesi Load (0.2ms)[0m  [1mSELECT "websitesis".* FROM "websitesis"[0m
+  Rendered home/index.html.erb within layouts/application (0.2ms)
+Completed 200 OK in 24ms (Views: 22.8ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/assets/home.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2015-10-29 19:17:19 +0300
+
+
+Started GET "/assets/scaffolds.self-75397570e7a1ff554dba3dc47300f020e17c6347615f91ff79c7737dcd1ccc2b.css?body=1" for 127.0.0.1 at 2015-10-29 19:17:19 +0300
+
+
+Started GET "/assets/jquery.self-a714331225dda820228db323939889f149aec0127aeb06255646b616ba1ca419.js?body=1" for 127.0.0.1 at 2015-10-29 19:17:19 +0300
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for 127.0.0.1 at 2015-10-29 19:17:19 +0300
+
+
+Started GET "/assets/websitesis.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2015-10-29 19:17:19 +0300
+
+
+Started GET "/assets/jquery_ujs.self-d456baa54c1fa6be2ec3711f0a72ddf7a5b2f34a6b4f515f33767d6207b7d4b3.js?body=1" for 127.0.0.1 at 2015-10-29 19:17:19 +0300
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for 127.0.0.1 at 2015-10-29 19:17:19 +0300
+
+
+Started GET "/assets/home.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2015-10-29 19:17:19 +0300
+
+
+Started GET "/assets/websitesis.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2015-10-29 19:17:19 +0300
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for 127.0.0.1 at 2015-10-29 19:17:19 +0300
+
+
+Started GET "/" for 127.0.0.1 at 2015-10-29 19:17:19 +0300
+Processing by HomeController#index as HTML
+  [1m[35mWebsitesi Load (0.1ms)[0m  SELECT "websitesis".* FROM "websitesis"
+  Rendered home/index.html.erb within layouts/application (0.1ms)
+Completed 200 OK in 23ms (Views: 22.4ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/assets/home.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2015-10-29 19:17:19 +0300
+
+
+Started GET "/assets/jquery_ujs.self-d456baa54c1fa6be2ec3711f0a72ddf7a5b2f34a6b4f515f33767d6207b7d4b3.js?body=1" for 127.0.0.1 at 2015-10-29 19:17:19 +0300
+
+
+Started GET "/assets/scaffolds.self-75397570e7a1ff554dba3dc47300f020e17c6347615f91ff79c7737dcd1ccc2b.css?body=1" for 127.0.0.1 at 2015-10-29 19:17:19 +0300
+
+
+Started GET "/assets/websitesis.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2015-10-29 19:17:19 +0300
+
+
+Started GET "/assets/jquery.self-a714331225dda820228db323939889f149aec0127aeb06255646b616ba1ca419.js?body=1" for 127.0.0.1 at 2015-10-29 19:17:19 +0300
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for 127.0.0.1 at 2015-10-29 19:17:19 +0300
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for 127.0.0.1 at 2015-10-29 19:17:19 +0300
+
+
+Started GET "/assets/home.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2015-10-29 19:17:19 +0300
+
+
+Started GET "/assets/websitesis.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2015-10-29 19:17:19 +0300
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for 127.0.0.1 at 2015-10-29 19:17:19 +0300
+
+
+Started GET "/" for 127.0.0.1 at 2015-10-29 19:17:19 +0300
+Processing by HomeController#index as HTML
+  [1m[36mWebsitesi Load (0.2ms)[0m  [1mSELECT "websitesis".* FROM "websitesis"[0m
+  Rendered home/index.html.erb within layouts/application (0.0ms)
+Completed 200 OK in 24ms (Views: 22.8ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/assets/home.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2015-10-29 19:17:20 +0300
+
+
+Started GET "/assets/scaffolds.self-75397570e7a1ff554dba3dc47300f020e17c6347615f91ff79c7737dcd1ccc2b.css?body=1" for 127.0.0.1 at 2015-10-29 19:17:20 +0300
+
+
+Started GET "/assets/websitesis.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2015-10-29 19:17:20 +0300
+
+
+Started GET "/assets/jquery.self-a714331225dda820228db323939889f149aec0127aeb06255646b616ba1ca419.js?body=1" for 127.0.0.1 at 2015-10-29 19:17:20 +0300
+
+
+Started GET "/assets/jquery_ujs.self-d456baa54c1fa6be2ec3711f0a72ddf7a5b2f34a6b4f515f33767d6207b7d4b3.js?body=1" for 127.0.0.1 at 2015-10-29 19:17:20 +0300
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for 127.0.0.1 at 2015-10-29 19:17:20 +0300
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for 127.0.0.1 at 2015-10-29 19:17:20 +0300
+
+
+Started GET "/assets/home.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2015-10-29 19:17:20 +0300
+
+
+Started GET "/assets/websitesis.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2015-10-29 19:17:20 +0300
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for 127.0.0.1 at 2015-10-29 19:17:20 +0300
+
+
+Started GET "/" for 127.0.0.1 at 2015-10-29 19:17:20 +0300
+Processing by HomeController#index as HTML
+  [1m[35mWebsitesi Load (0.1ms)[0m  SELECT "websitesis".* FROM "websitesis"
+  Rendered home/index.html.erb within layouts/application (0.0ms)
+Completed 200 OK in 21ms (Views: 20.0ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/assets/home.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2015-10-29 19:17:20 +0300
+
+
+Started GET "/assets/scaffolds.self-75397570e7a1ff554dba3dc47300f020e17c6347615f91ff79c7737dcd1ccc2b.css?body=1" for 127.0.0.1 at 2015-10-29 19:17:20 +0300
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for 127.0.0.1 at 2015-10-29 19:17:20 +0300
+
+
+Started GET "/assets/jquery.self-a714331225dda820228db323939889f149aec0127aeb06255646b616ba1ca419.js?body=1" for 127.0.0.1 at 2015-10-29 19:17:20 +0300
+
+
+Started GET "/assets/jquery_ujs.self-d456baa54c1fa6be2ec3711f0a72ddf7a5b2f34a6b4f515f33767d6207b7d4b3.js?body=1" for 127.0.0.1 at 2015-10-29 19:17:20 +0300
+
+
+Started GET "/assets/websitesis.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2015-10-29 19:17:20 +0300
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for 127.0.0.1 at 2015-10-29 19:17:20 +0300
+
+
+Started GET "/assets/home.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2015-10-29 19:17:20 +0300
+
+
+Started GET "/assets/websitesis.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2015-10-29 19:17:20 +0300
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for 127.0.0.1 at 2015-10-29 19:17:20 +0300
+
+
+Started GET "/" for 127.0.0.1 at 2015-10-29 19:17:20 +0300
+Processing by HomeController#index as HTML
+  [1m[36mWebsitesi Load (0.1ms)[0m  [1mSELECT "websitesis".* FROM "websitesis"[0m
+  Rendered home/index.html.erb within layouts/application (0.1ms)
+Completed 200 OK in 23ms (Views: 22.4ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/assets/home.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2015-10-29 19:17:20 +0300
+
+
+Started GET "/assets/jquery.self-a714331225dda820228db323939889f149aec0127aeb06255646b616ba1ca419.js?body=1" for 127.0.0.1 at 2015-10-29 19:17:20 +0300
+
+
+Started GET "/assets/scaffolds.self-75397570e7a1ff554dba3dc47300f020e17c6347615f91ff79c7737dcd1ccc2b.css?body=1" for 127.0.0.1 at 2015-10-29 19:17:20 +0300
+
+
+Started GET "/assets/websitesis.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2015-10-29 19:17:20 +0300
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for 127.0.0.1 at 2015-10-29 19:17:20 +0300
+
+
+Started GET "/assets/jquery_ujs.self-d456baa54c1fa6be2ec3711f0a72ddf7a5b2f34a6b4f515f33767d6207b7d4b3.js?body=1" for 127.0.0.1 at 2015-10-29 19:17:20 +0300
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for 127.0.0.1 at 2015-10-29 19:17:20 +0300
+
+
+Started GET "/assets/home.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2015-10-29 19:17:20 +0300
+
+
+Started GET "/assets/websitesis.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2015-10-29 19:17:20 +0300
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for 127.0.0.1 at 2015-10-29 19:17:20 +0300
+
+
+Started GET "/" for 127.0.0.1 at 2015-10-29 19:17:20 +0300
+Processing by HomeController#index as HTML
+  [1m[35mWebsitesi Load (0.1ms)[0m  SELECT "websitesis".* FROM "websitesis"
+  Rendered home/index.html.erb within layouts/application (0.0ms)
+Completed 200 OK in 21ms (Views: 19.9ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/assets/home.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2015-10-29 19:17:20 +0300
+
+
+Started GET "/assets/scaffolds.self-75397570e7a1ff554dba3dc47300f020e17c6347615f91ff79c7737dcd1ccc2b.css?body=1" for 127.0.0.1 at 2015-10-29 19:17:20 +0300
+
+
+Started GET "/assets/websitesis.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2015-10-29 19:17:20 +0300
+
+
+Started GET "/assets/jquery.self-a714331225dda820228db323939889f149aec0127aeb06255646b616ba1ca419.js?body=1" for 127.0.0.1 at 2015-10-29 19:17:20 +0300
+
+
+Started GET "/assets/jquery_ujs.self-d456baa54c1fa6be2ec3711f0a72ddf7a5b2f34a6b4f515f33767d6207b7d4b3.js?body=1" for 127.0.0.1 at 2015-10-29 19:17:20 +0300
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for 127.0.0.1 at 2015-10-29 19:17:20 +0300
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for 127.0.0.1 at 2015-10-29 19:17:20 +0300
+
+
+Started GET "/assets/home.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2015-10-29 19:17:20 +0300
+
+
+Started GET "/assets/websitesis.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2015-10-29 19:17:20 +0300
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for 127.0.0.1 at 2015-10-29 19:17:20 +0300
+
+
+Started GET "/" for 127.0.0.1 at 2015-10-29 19:17:20 +0300
+Processing by HomeController#index as HTML
+  [1m[36mWebsitesi Load (0.1ms)[0m  [1mSELECT "websitesis".* FROM "websitesis"[0m
+  Rendered home/index.html.erb within layouts/application (0.2ms)
+Completed 200 OK in 21ms (Views: 20.2ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/assets/home.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2015-10-29 19:17:20 +0300
+
+
+Started GET "/assets/websitesis.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2015-10-29 19:17:20 +0300
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for 127.0.0.1 at 2015-10-29 19:17:20 +0300
+
+
+Started GET "/assets/scaffolds.self-75397570e7a1ff554dba3dc47300f020e17c6347615f91ff79c7737dcd1ccc2b.css?body=1" for 127.0.0.1 at 2015-10-29 19:17:20 +0300
+
+
+Started GET "/assets/jquery.self-a714331225dda820228db323939889f149aec0127aeb06255646b616ba1ca419.js?body=1" for 127.0.0.1 at 2015-10-29 19:17:20 +0300
+
+
+Started GET "/assets/jquery_ujs.self-d456baa54c1fa6be2ec3711f0a72ddf7a5b2f34a6b4f515f33767d6207b7d4b3.js?body=1" for 127.0.0.1 at 2015-10-29 19:17:20 +0300
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for 127.0.0.1 at 2015-10-29 19:17:20 +0300
+
+
+Started GET "/assets/home.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2015-10-29 19:17:20 +0300
+
+
+Started GET "/assets/websitesis.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2015-10-29 19:17:20 +0300
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for 127.0.0.1 at 2015-10-29 19:17:20 +0300
+
+
+Started GET "/" for 127.0.0.1 at 2015-10-29 19:17:20 +0300
+Processing by HomeController#index as HTML
+  [1m[35mWebsitesi Load (0.1ms)[0m  SELECT "websitesis".* FROM "websitesis"
+  Rendered home/index.html.erb within layouts/application (0.0ms)
+Completed 200 OK in 22ms (Views: 20.8ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/assets/scaffolds.self-75397570e7a1ff554dba3dc47300f020e17c6347615f91ff79c7737dcd1ccc2b.css?body=1" for 127.0.0.1 at 2015-10-29 19:17:20 +0300
+
+
+Started GET "/assets/home.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2015-10-29 19:17:20 +0300
+
+
+Started GET "/assets/jquery.self-a714331225dda820228db323939889f149aec0127aeb06255646b616ba1ca419.js?body=1" for 127.0.0.1 at 2015-10-29 19:17:20 +0300
+
+
+Started GET "/assets/websitesis.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2015-10-29 19:17:20 +0300
+
+
+Started GET "/assets/jquery_ujs.self-d456baa54c1fa6be2ec3711f0a72ddf7a5b2f34a6b4f515f33767d6207b7d4b3.js?body=1" for 127.0.0.1 at 2015-10-29 19:17:20 +0300
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for 127.0.0.1 at 2015-10-29 19:17:20 +0300
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for 127.0.0.1 at 2015-10-29 19:17:20 +0300
+
+
+Started GET "/assets/home.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2015-10-29 19:17:20 +0300
+
+
+Started GET "/assets/websitesis.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2015-10-29 19:17:20 +0300
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for 127.0.0.1 at 2015-10-29 19:17:20 +0300
+
+
+Started GET "/" for 127.0.0.1 at 2015-10-29 19:17:20 +0300
+Processing by HomeController#index as HTML
+  [1m[36mWebsitesi Load (0.2ms)[0m  [1mSELECT "websitesis".* FROM "websitesis"[0m
+  Rendered home/index.html.erb within layouts/application (0.2ms)
+Completed 200 OK in 34ms (Views: 32.8ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/assets/home.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2015-10-29 19:17:21 +0300
+
+
+Started GET "/assets/jquery_ujs.self-d456baa54c1fa6be2ec3711f0a72ddf7a5b2f34a6b4f515f33767d6207b7d4b3.js?body=1" for 127.0.0.1 at 2015-10-29 19:17:21 +0300
+
+
+Started GET "/assets/websitesis.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2015-10-29 19:17:21 +0300
+
+
+Started GET "/assets/scaffolds.self-75397570e7a1ff554dba3dc47300f020e17c6347615f91ff79c7737dcd1ccc2b.css?body=1" for 127.0.0.1 at 2015-10-29 19:17:21 +0300
+
+
+Started GET "/assets/jquery.self-a714331225dda820228db323939889f149aec0127aeb06255646b616ba1ca419.js?body=1" for 127.0.0.1 at 2015-10-29 19:17:21 +0300
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for 127.0.0.1 at 2015-10-29 19:17:21 +0300
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for 127.0.0.1 at 2015-10-29 19:17:21 +0300
+
+
+Started GET "/assets/home.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2015-10-29 19:17:21 +0300
+
+
+Started GET "/assets/websitesis.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2015-10-29 19:17:21 +0300
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for 127.0.0.1 at 2015-10-29 19:17:21 +0300
+
+
+Started GET "/" for 127.0.0.1 at 2015-10-29 19:17:21 +0300
+Processing by HomeController#index as HTML
+  [1m[35mWebsitesi Load (0.1ms)[0m  SELECT "websitesis".* FROM "websitesis"
+  Rendered home/index.html.erb within layouts/application (0.1ms)
+Completed 200 OK in 26ms (Views: 25.5ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/assets/home.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2015-10-29 19:17:21 +0300
+
+
+Started GET "/assets/jquery.self-a714331225dda820228db323939889f149aec0127aeb06255646b616ba1ca419.js?body=1" for 127.0.0.1 at 2015-10-29 19:17:21 +0300
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for 127.0.0.1 at 2015-10-29 19:17:21 +0300
+
+
+Started GET "/assets/scaffolds.self-75397570e7a1ff554dba3dc47300f020e17c6347615f91ff79c7737dcd1ccc2b.css?body=1" for 127.0.0.1 at 2015-10-29 19:17:21 +0300
+
+
+Started GET "/assets/websitesis.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2015-10-29 19:17:21 +0300
+
+
+Started GET "/assets/jquery_ujs.self-d456baa54c1fa6be2ec3711f0a72ddf7a5b2f34a6b4f515f33767d6207b7d4b3.js?body=1" for 127.0.0.1 at 2015-10-29 19:17:21 +0300
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for 127.0.0.1 at 2015-10-29 19:17:21 +0300
+
+
+Started GET "/assets/home.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2015-10-29 19:17:21 +0300
+
+
+Started GET "/assets/websitesis.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2015-10-29 19:17:21 +0300
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for 127.0.0.1 at 2015-10-29 19:17:21 +0300
+
+
+Started GET "/" for 127.0.0.1 at 2015-10-29 19:17:21 +0300
+Processing by HomeController#index as HTML
+  [1m[36mWebsitesi Load (0.1ms)[0m  [1mSELECT "websitesis".* FROM "websitesis"[0m
+  Rendered home/index.html.erb within layouts/application (0.0ms)
+Completed 200 OK in 21ms (Views: 19.7ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/assets/home.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2015-10-29 19:17:21 +0300
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for 127.0.0.1 at 2015-10-29 19:17:21 +0300
+
+
+Started GET "/assets/websitesis.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2015-10-29 19:17:21 +0300
+
+
+Started GET "/assets/scaffolds.self-75397570e7a1ff554dba3dc47300f020e17c6347615f91ff79c7737dcd1ccc2b.css?body=1" for 127.0.0.1 at 2015-10-29 19:17:21 +0300
+
+
+Started GET "/assets/jquery_ujs.self-d456baa54c1fa6be2ec3711f0a72ddf7a5b2f34a6b4f515f33767d6207b7d4b3.js?body=1" for 127.0.0.1 at 2015-10-29 19:17:21 +0300
+
+
+Started GET "/assets/jquery.self-a714331225dda820228db323939889f149aec0127aeb06255646b616ba1ca419.js?body=1" for 127.0.0.1 at 2015-10-29 19:17:21 +0300
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for 127.0.0.1 at 2015-10-29 19:17:21 +0300
+
+
+Started GET "/assets/home.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2015-10-29 19:17:21 +0300
+
+
+Started GET "/assets/websitesis.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2015-10-29 19:17:21 +0300
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for 127.0.0.1 at 2015-10-29 19:17:21 +0300
+
+
+Started GET "/" for 127.0.0.1 at 2015-10-29 19:17:21 +0300
+Processing by HomeController#index as HTML
+  [1m[35mWebsitesi Load (0.1ms)[0m  SELECT "websitesis".* FROM "websitesis"
+  Rendered home/index.html.erb within layouts/application (0.0ms)
+Completed 200 OK in 22ms (Views: 20.9ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/assets/scaffolds.self-75397570e7a1ff554dba3dc47300f020e17c6347615f91ff79c7737dcd1ccc2b.css?body=1" for 127.0.0.1 at 2015-10-29 19:17:21 +0300
+
+
+Started GET "/assets/jquery.self-a714331225dda820228db323939889f149aec0127aeb06255646b616ba1ca419.js?body=1" for 127.0.0.1 at 2015-10-29 19:17:21 +0300
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for 127.0.0.1 at 2015-10-29 19:17:21 +0300
+
+
+Started GET "/assets/jquery_ujs.self-d456baa54c1fa6be2ec3711f0a72ddf7a5b2f34a6b4f515f33767d6207b7d4b3.js?body=1" for 127.0.0.1 at 2015-10-29 19:17:21 +0300
+
+
+Started GET "/assets/home.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2015-10-29 19:17:21 +0300
+
+
+Started GET "/assets/websitesis.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2015-10-29 19:17:21 +0300
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for 127.0.0.1 at 2015-10-29 19:17:21 +0300
+
+
+Started GET "/assets/home.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2015-10-29 19:17:21 +0300
+
+
+Started GET "/assets/websitesis.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2015-10-29 19:17:21 +0300
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for 127.0.0.1 at 2015-10-29 19:17:21 +0300
+
+
+Started GET "/" for 127.0.0.1 at 2015-10-29 19:17:21 +0300
+Processing by HomeController#index as HTML
+  [1m[36mWebsitesi Load (0.1ms)[0m  [1mSELECT "websitesis".* FROM "websitesis"[0m
+  Rendered home/index.html.erb within layouts/application (0.1ms)
+Completed 200 OK in 33ms (Views: 32.3ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/assets/scaffolds.self-75397570e7a1ff554dba3dc47300f020e17c6347615f91ff79c7737dcd1ccc2b.css?body=1" for 127.0.0.1 at 2015-10-29 19:17:21 +0300
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for 127.0.0.1 at 2015-10-29 19:17:21 +0300
+
+
+Started GET "/assets/home.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2015-10-29 19:17:21 +0300
+
+
+Started GET "/assets/jquery.self-a714331225dda820228db323939889f149aec0127aeb06255646b616ba1ca419.js?body=1" for 127.0.0.1 at 2015-10-29 19:17:21 +0300
+
+
+Started GET "/assets/websitesis.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2015-10-29 19:17:21 +0300
+
+
+Started GET "/assets/jquery_ujs.self-d456baa54c1fa6be2ec3711f0a72ddf7a5b2f34a6b4f515f33767d6207b7d4b3.js?body=1" for 127.0.0.1 at 2015-10-29 19:17:21 +0300
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for 127.0.0.1 at 2015-10-29 19:17:21 +0300
+
+
+Started GET "/assets/home.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2015-10-29 19:17:21 +0300
+
+
+Started GET "/assets/websitesis.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2015-10-29 19:17:21 +0300
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for 127.0.0.1 at 2015-10-29 19:17:21 +0300
+
+
+Started GET "/" for 127.0.0.1 at 2015-10-29 19:17:21 +0300
+Processing by HomeController#index as HTML
+  [1m[35mWebsitesi Load (0.1ms)[0m  SELECT "websitesis".* FROM "websitesis"
+  Rendered home/index.html.erb within layouts/application (0.1ms)
+Completed 200 OK in 20ms (Views: 19.5ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/assets/home.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2015-10-29 19:17:21 +0300
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for 127.0.0.1 at 2015-10-29 19:17:21 +0300
+
+
+Started GET "/assets/scaffolds.self-75397570e7a1ff554dba3dc47300f020e17c6347615f91ff79c7737dcd1ccc2b.css?body=1" for 127.0.0.1 at 2015-10-29 19:17:21 +0300
+
+
+Started GET "/assets/jquery.self-a714331225dda820228db323939889f149aec0127aeb06255646b616ba1ca419.js?body=1" for 127.0.0.1 at 2015-10-29 19:17:21 +0300
+
+
+Started GET "/assets/jquery_ujs.self-d456baa54c1fa6be2ec3711f0a72ddf7a5b2f34a6b4f515f33767d6207b7d4b3.js?body=1" for 127.0.0.1 at 2015-10-29 19:17:21 +0300
+
+
+Started GET "/assets/websitesis.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2015-10-29 19:17:21 +0300
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for 127.0.0.1 at 2015-10-29 19:17:21 +0300
+
+
+Started GET "/assets/home.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2015-10-29 19:17:21 +0300
+
+
+Started GET "/assets/websitesis.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2015-10-29 19:17:21 +0300
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for 127.0.0.1 at 2015-10-29 19:17:21 +0300
+
+
+Started GET "/" for 127.0.0.1 at 2015-10-29 19:17:21 +0300
+Processing by HomeController#index as HTML
+  [1m[36mWebsitesi Load (0.1ms)[0m  [1mSELECT "websitesis".* FROM "websitesis"[0m
+  Rendered home/index.html.erb within layouts/application (0.0ms)
+Completed 200 OK in 20ms (Views: 19.6ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/assets/home.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2015-10-29 19:17:21 +0300
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for 127.0.0.1 at 2015-10-29 19:17:21 +0300
+
+
+Started GET "/assets/scaffolds.self-75397570e7a1ff554dba3dc47300f020e17c6347615f91ff79c7737dcd1ccc2b.css?body=1" for 127.0.0.1 at 2015-10-29 19:17:22 +0300
+
+
+Started GET "/assets/websitesis.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2015-10-29 19:17:22 +0300
+
+
+Started GET "/assets/jquery_ujs.self-d456baa54c1fa6be2ec3711f0a72ddf7a5b2f34a6b4f515f33767d6207b7d4b3.js?body=1" for 127.0.0.1 at 2015-10-29 19:17:22 +0300
+
+
+Started GET "/assets/jquery.self-a714331225dda820228db323939889f149aec0127aeb06255646b616ba1ca419.js?body=1" for 127.0.0.1 at 2015-10-29 19:17:22 +0300
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for 127.0.0.1 at 2015-10-29 19:17:22 +0300
+
+
+Started GET "/assets/home.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2015-10-29 19:17:22 +0300
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for 127.0.0.1 at 2015-10-29 19:17:22 +0300
+
+
+Started GET "/assets/websitesis.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2015-10-29 19:17:22 +0300
+
+
+Started GET "/" for 127.0.0.1 at 2015-10-29 19:17:22 +0300
+Processing by HomeController#index as HTML
+  [1m[35mWebsitesi Load (0.1ms)[0m  SELECT "websitesis".* FROM "websitesis"
+  Rendered home/index.html.erb within layouts/application (0.0ms)
+Completed 200 OK in 24ms (Views: 23.6ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/assets/home.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2015-10-29 19:17:22 +0300
+
+
+Started GET "/assets/jquery_ujs.self-d456baa54c1fa6be2ec3711f0a72ddf7a5b2f34a6b4f515f33767d6207b7d4b3.js?body=1" for 127.0.0.1 at 2015-10-29 19:17:22 +0300
+
+
+Started GET "/assets/scaffolds.self-75397570e7a1ff554dba3dc47300f020e17c6347615f91ff79c7737dcd1ccc2b.css?body=1" for 127.0.0.1 at 2015-10-29 19:17:22 +0300
+
+
+Started GET "/assets/jquery.self-a714331225dda820228db323939889f149aec0127aeb06255646b616ba1ca419.js?body=1" for 127.0.0.1 at 2015-10-29 19:17:22 +0300
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for 127.0.0.1 at 2015-10-29 19:17:22 +0300
+
+
+Started GET "/assets/websitesis.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2015-10-29 19:17:22 +0300
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for 127.0.0.1 at 2015-10-29 19:17:22 +0300
+
+
+Started GET "/assets/home.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2015-10-29 19:17:22 +0300
+
+
+Started GET "/assets/websitesis.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2015-10-29 19:17:22 +0300
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for 127.0.0.1 at 2015-10-29 19:17:22 +0300

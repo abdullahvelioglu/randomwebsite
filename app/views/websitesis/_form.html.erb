@@ -1,0 +1,21 @@
+<%= form_for(@websitesi) do |f| %>
+  <% if @websitesi.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@websitesi.errors.count, "error") %> prohibited this websitesi from being saved:</h2>
+
+      <ul>
+      <% @websitesi.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :adresi %><br>
+    <%= f.text_field :adresi %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>
